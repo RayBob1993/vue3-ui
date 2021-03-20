@@ -1,0 +1,51 @@
+.v-checkbox {
+  position: relative;
+
+  display: inline-flex;
+  flex-flow: row wrap;
+
+  cursor: pointer;
+
+  transition: $transition-base;
+
+  &--disabled {
+    @include utils-disabled()
+  }
+
+  &:not(&--disabled):hover {
+    .v-checkbox__input {
+      border-color: $color-blue;
+    }
+  }
+
+  &--large {}
+  &--medium {}
+  &--small {}
+  &--mini {}
+
+  &__native {
+    @include hidden-input();
+
+    &:checked ~ .v-checkbox__input {
+      background-color: $color-blue;
+      border-color: $color-blue;
+    }
+  }
+
+  &__input {
+    width: 14px;
+    height: 14px;
+    margin-right: 8px;
+    border: 1px solid $color-gray;
+
+    transition: $transition-base;
+
+    border-radius: $border-radius-small;
+  }
+
+  &__content {
+    flex: 1;
+
+    transition: $transition-base;
+  }
+}

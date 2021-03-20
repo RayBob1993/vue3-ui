@@ -1,0 +1,168 @@
+.v-col {
+  flex: 0 0 auto;
+  padding-left: $gutters;
+  padding-right: $gutters;
+  min-height: 1px;
+  max-width: 100%;
+
+  @include generate-cols;
+
+  &-auto {
+    flex: 1;
+  }
+}
+
+// Offset
+.v-col-offset {
+  @include generate-offsets;
+}
+
+// Order
+.v-col-order {
+  @include generate-orders;
+}
+
+// Responsive
+@include media-xxl-down {
+  .v-col-xxl {
+    &-default {
+      flex: 0 0 auto;
+      max-width: 100%;
+    }
+
+    &-auto {
+      flex: 1;
+      max-width: 100%;
+    }
+
+    @include generate-cols;
+  }
+
+  .v-col-xxl-offset {
+    @include generate-offsets;
+  }
+
+  .v-col-xxl-order {
+    @include generate-orders;
+  }
+}
+
+@include media-xl-down {
+  .v-col-xl {
+    &-default {
+      flex: 0 0 auto;
+      max-width: 100%;
+    }
+
+    &-auto {
+      flex: 1;
+      max-width: 100%;
+    }
+
+    @include generate-cols;
+  }
+
+  .v-col-xl-offset {
+    @include generate-offsets;
+  }
+
+  .v-col-xl-order {
+    @include generate-orders;
+  }
+}
+
+@include media-lg-down {
+  .v-col-lg {
+    &-default {
+      flex: 0 0 auto;
+      max-width: 100%;
+    }
+
+    &-auto {
+      flex: 1;
+      max-width: 100%;
+    }
+
+    @include generate-cols;
+  }
+
+  .v-col-lg-offset {
+    @include generate-offsets;
+  }
+
+  .v-col-lg-order {
+    @include generate-orders;
+  }
+}
+
+@include media-md-down {
+  .v-col-md {
+    &-default {
+      flex: 0 0 auto;
+      max-width: 100%;
+    }
+
+    &-auto {
+      flex: 1;
+      max-width: 100%;
+    }
+
+    @include generate-cols;
+  }
+
+  .v-col-md-offset {
+    @include generate-offsets;
+  }
+
+  .v-col-md-order {
+    @include generate-orders;
+  }
+}
+
+@include media-sm-down {
+  .v-col-sm {
+    &-default {
+      flex: 0 0 auto;
+      max-width: 100%;
+    }
+
+    &-auto {
+      flex: 1;
+      max-width: 100%;
+    }
+
+    @include generate-cols;
+  }
+
+  .v-col-sm-offset {
+    @include generate-offsets;
+  }
+
+  .v-col-sm-order {
+    @include generate-orders;
+  }
+}
+
+@include media-xs-down {
+  .v-col-xs {
+    &-default {
+      flex: 0 0 auto;
+      max-width: 100%;
+    }
+
+    &-auto {
+      flex: 1;
+      max-width: 100%;
+    }
+
+    @include generate-cols;
+  }
+
+  .v-col-xs-offset {
+    @include generate-offsets;
+  }
+
+  .v-col-xs-order {
+    @include generate-orders;
+  }
+}

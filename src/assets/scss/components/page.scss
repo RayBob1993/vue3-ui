@@ -1,0 +1,19 @@
+.page {
+  &__header {
+    padding-top: 20px;
+    margin-bottom: 40px;
+  }
+
+  &__title {
+    margin-bottom: 0;
+
+    font-weight: 500;
+  }
+
+  &__content {
+    > h2 {
+      padding-bottom: 10px;
+      border-bottom: 1px solid #eaecef;
+    }
+  }
+}

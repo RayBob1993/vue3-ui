@@ -1,0 +1,43 @@
+.v-radio-button {
+  position: relative;
+
+  cursor: pointer;
+
+  &--disabled {
+    .v-radio-button__content {
+      @include utils-disabled()
+    }
+  }
+
+  &:not(&--disabled):hover {
+    .v-radio-button__content {
+      z-index: 2;
+
+      border-color: $color-blue;
+    }
+  }
+
+  &--large {}
+  &--medium {}
+  &--small {}
+  &--mini {}
+
+  &__native {
+    @include hidden-input();
+
+    &:checked ~ .v-radio-button__content {
+      z-index: 2;
+
+      background-color: $color-blue;
+      border-color: $color-blue;
+
+      color: $color-white;
+    }
+  }
+
+  &__content {
+    position: relative;
+    @include button-base();
+    border: 1px solid $color-gray;
+  }
+}

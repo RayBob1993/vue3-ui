@@ -1,0 +1,24 @@
+@mixin button-base () {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: $button-size-default;
+
+  cursor: pointer;
+  border-radius: $border-radius-default;
+  transition: $transition-base;
+
+  text-align: center;
+  line-height: $line-height;
+  white-space: nowrap;
+  text-transform: none;
+  text-shadow: none;
+  text-decoration: none;
+  font-weight: normal;
+  font-size: $font-size-default;
+
+  -webkit-tap-highlight-color: transparent;
+
+  outline: 0;
+}

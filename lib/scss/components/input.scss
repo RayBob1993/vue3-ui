@@ -1,0 +1,91 @@
+.v-input {
+  position: relative;
+
+  display: flex;
+  flex-flow: row wrap;
+
+  &--disabled {
+    .v-input__native {
+      @include utils-disabled()
+    }
+  }
+
+  &--focused {}
+  &--exceed {}
+  &--icon-before {}
+  &--icon-after {}
+  &--addon-before {}
+  &--addon-after {}
+  &--readonly {}
+
+  &--mini {}
+  &--small {}
+  &--medium {}
+  &--large {}
+
+  &__native {
+    display: block;
+    width: 100%;
+
+    padding: 10px 20px;
+    margin: 0;
+    border: 1px solid #ccc;
+
+    box-shadow: inset 0 0.0625em 0.125em hsl(0deg 0% 4% / 5%);
+    border-radius: $border-radius-default;
+
+    outline: none;
+
+    transition: $transition-base;
+
+    @include utils-appearance(none);
+
+    &--rounded {}
+    &--disabled {}
+  }
+
+  &__control {
+    position: relative;
+
+    flex: 1;
+
+    &-buttons {
+      position: absolute;
+      top: 0;
+      right: 0;
+
+      display: flex;
+      flex-flow: row wrap;
+    }
+
+    &-button {
+      &:not(:last-child) {
+        margin-right: 5px;
+      }
+
+      &--password {}
+      &--clear {}
+    }
+  }
+
+  &__count {
+    position: absolute;
+    top: 100%;
+    right: 0;
+
+    &-current {}
+    &-divider {}
+    &-limit {}
+  }
+
+  &__loading {}
+
+  &__addon {
+    flex: 0;
+
+    &--before {}
+    &--after {}
+
+    &-value {}
+  }
+}

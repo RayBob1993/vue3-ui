@@ -1,0 +1,38 @@
+.v-form-item {
+  margin-bottom: 15px;
+
+  &--disabled {}
+
+  &--readonly {}
+
+  &--error {
+    .v-input__native {
+      border-color: $color-danger;
+    }
+  }
+
+  &__label {
+    display: block;
+    margin-bottom: 10px;
+
+    font-weight: bold;
+    color: $color-dark;
+
+    &-required {
+      color: $color-danger;
+    }
+  }
+
+  &__errors {
+    margin-top: 10px;
+  }
+
+  &__error {
+    color: $color-danger;
+    font-size: 12px;
+
+    & + & {
+      margin-top: 10px;
+    }
+  }
+}

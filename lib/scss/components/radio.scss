@@ -1,0 +1,76 @@
+.v-radio {
+  position: relative;
+
+  display: inline-flex;
+  flex-flow: row wrap;
+
+  cursor: pointer;
+
+  transition: $transition-base;
+
+  &--disabled {
+    @include utils-disabled()
+  }
+
+  &:not(&--disabled):hover {
+    .v-radio__input {
+      border-color: $color-blue;
+    }
+  }
+
+  &--large {}
+  &--medium {}
+  &--small {}
+  &--mini {}
+
+  &__native {
+    @include hidden-input();
+
+    &:checked ~ .v-radio__input {
+      background-color: $color-blue;
+      border-color: $color-blue;
+
+      &:before {
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+  }
+
+  &__input {
+    position: relative;
+
+    width: 14px;
+    height: 14px;
+    margin-right: 8px;
+    border: 1px solid $color-gray;
+
+    transition: $transition-base;
+
+    border-radius: $border-radius-circle;
+
+    &:before {
+      position: absolute;
+      left: calc(50% - 3px);
+      top: calc(50% - 3px);
+
+      width: 6px;
+      height: 6px;
+
+      border-radius: $border-radius-circle;
+      background-color: $color-white;
+
+      transition: $transition-base;
+      opacity: 0;
+      visibility: hidden;
+
+      content: '';
+    }
+  }
+
+  &__content {
+    flex: 1;
+
+    transition: $transition-base;
+  }
+}

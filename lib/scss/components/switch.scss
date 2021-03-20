@@ -1,0 +1,75 @@
+.v-switch {
+  position: relative;
+
+  display: inline-flex;
+  flex-flow: row wrap;
+  align-items: center;
+
+  cursor: pointer;
+
+  transition: $transition-base;
+
+  &--disabled {
+    @include utils-disabled()
+  }
+
+  &:not(&--disabled):hover {
+    .v-switch__input {
+      &:before {
+        border-color: $color-blue;
+      }
+    }
+  }
+
+  &--large {}
+  &--medium {}
+  &--small {}
+  &--mini {}
+
+  &__native {
+    @include hidden-input();
+
+    &:checked ~ .v-switch__input {
+      &:before {
+        margin-left: 17px;
+
+        background-color: $color-blue;
+        border-color: $color-blue;
+      }
+    }
+  }
+
+  &__title {
+    flex: 0 0 auto;
+
+    &--active {
+      margin-left: 8px;
+    }
+
+    &--inactive {
+      margin-right: 8px;
+    }
+  }
+
+  &__input {
+    flex: 1;
+    width: 35px;
+    padding: 1px;
+    border: 1px solid $color-gray;
+
+    border-radius: $border-radius-rounded;
+
+    &:before {
+      display: block;
+      width: 14px;
+      height: 14px;
+      border: 1px solid $color-gray;
+
+      transition: $transition-base;
+
+      border-radius: $border-radius-circle;
+
+      content: '';
+    }
+  }
+}

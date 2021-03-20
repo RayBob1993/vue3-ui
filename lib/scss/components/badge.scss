@@ -1,0 +1,124 @@
+.v-badge {
+  position: relative;
+
+  display: inline-flex;
+
+  // Types
+  &--default {
+    .badge__value {
+      background-color: $color-default;
+
+      color: $color-default-text;
+    }
+  }
+
+  &--primary {
+    .badge__value {
+      background-color: $color-primary;
+
+      color: $color-primary-text;
+    }
+  }
+
+  &--success {
+    .badge__value {
+      background-color: $color-success;
+
+      color: $color-success-text;
+    }
+  }
+
+  &--danger {
+    .badge__value {
+      background-color: $color-danger;
+
+      color: $color-danger-text;
+    }
+  }
+
+  &--warning {
+    .badge__value {
+      background-color: $color-warning;
+
+      color: $color-warning-text;
+    }
+  }
+
+  &--info {
+    .badge__value {
+      background-color: $color-info;
+
+      color: $color-info-text;
+    }
+  }
+
+  &--hover {
+    .badge__value {
+      opacity: 0;
+      visibility: hidden;
+    }
+
+    &:hover {
+      .badge__value {
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+  }
+
+  &--dot {
+    .badge__value {
+      width: 9px;
+      height: 9px;
+      min-width: 0;
+    }
+  }
+
+  // Position
+  &--top-right {
+    .badge__value {
+      top: 0;
+      right: 10px;
+
+      transform: translate(100%, -50%);
+    }
+  }
+
+  &--top-left {
+    .badge__value {
+      top: 0;
+      left: 10px;
+
+      transform: translate(-100%, -50%);
+    }
+  }
+
+  &--bottom-right {
+    .badge__value {
+      bottom: 0;
+      right: 10px;
+
+      transform: translate(100%, 50%);
+    }
+  }
+
+  &--bottom-left {
+    .badge__value {
+      bottom: 0;
+      left: 10px;
+
+      transform: translate(-100%, 50%);
+    }
+  }
+
+  &__value {
+    position: absolute;
+    z-index: 10;
+
+    white-space: nowrap;
+    height: 20px;
+    min-width: 20px;
+
+    pointer-events: none;
+  }
+}

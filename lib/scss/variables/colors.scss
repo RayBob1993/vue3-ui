@@ -1,0 +1,53 @@
+// Colors
+$color-dark: #363636 !default;
+$color-black: #000 !default;
+$color-white: #fff !default;
+$color-violet: #7957d5 !default;
+$color-green: #21ba45 !default;
+$color-red: #db2828 !default;
+$color-yellow: #ffdd57 !default;
+$color-blue: #2185d0 !default;
+$color-gray-light: #e0e1e2 !default;
+$color-gray: #ccc !default;
+$color-gray-dark: #909399 !default;
+
+// Types
+$color-default: $color-gray-light !default;
+$color-default-text: $color-dark !default;
+$color-default-outline-text: $color-dark !default;
+$color-default-hover: darken($color-default, 5) !default;
+
+$color-primary: $color-blue !default;
+$color-primary-text: $color-white !default;
+$color-primary-outline-text: $color-blue !default;
+$color-primary-hover: darken($color-primary, 5) !default;
+
+$color-secondary: $color-violet !default;
+$color-secondary-text: $color-white !default;
+$color-secondary-outline-text: $color-violet !default;
+$color-secondary-hover: darken($color-secondary, 5) !default;
+
+$color-warning: $color-yellow !default;
+$color-warning-text: $color-dark !default;
+$color-warning-outline-text: $color-yellow !default;
+$color-warning-hover: darken($color-warning, 10) !default;
+
+$color-danger: $color-red !default;
+$color-danger-text: $color-white !default;
+$color-danger-outline-text: $color-red !default;
+$color-danger-hover: darken($color-danger, 5) !default;
+
+$color-success: $color-green !default;
+$color-success-text: $color-white !default;
+$color-success-outline-text: $color-green !default;
+$color-success-hover: darken($color-success, 5) !default;
+
+$color-info: $color-gray-dark !default;
+$color-info-text: $color-white !default;
+$color-info-outline-text: $color-gray-dark !default;
+$color-info-hover: darken($color-info, 5) !default;
+
+$color-link: transparent !default;
+$color-link-text: $color-blue !default;
+$color-link-outline-text: $color-blue !default;
+$color-link-hover: darken($color-link, 5) !default;

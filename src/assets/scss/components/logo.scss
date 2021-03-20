@@ -1,0 +1,19 @@
+.logo {
+  display: inline-flex;
+  flex-flow: row wrap;
+  align-items: center;
+
+  text-decoration: none;
+
+  &__image {
+    width: 35px;
+    height: 35px;
+    margin-right: 10px;
+  }
+
+  &__name {
+    font-size: 21px;
+    font-weight: 500;
+    color: #2c3e50;
+  }
+}

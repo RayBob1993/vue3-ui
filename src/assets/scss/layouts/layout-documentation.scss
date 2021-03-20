@@ -1,0 +1,25 @@
+.layout-documentation {
+  padding-top: 60px;
+  min-height: 100vh;
+  min-width: 320px;
+  display: flex;
+  flex-flow: row wrap;
+
+  &__sidebar {
+    position: fixed;
+    top: 60px;
+    left: 0;
+    bottom: 0;
+
+    width: 320px;
+
+    border-right: 1px solid #eaecef;
+    overflow-y: auto;
+  }
+
+  &__content {
+    margin-left: 320px;
+    padding: 0 20px;
+    flex: 1;
+  }
+}
