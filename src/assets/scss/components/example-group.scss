@@ -1,0 +1,13 @@
+.example-group {
+  &:not(:last-child) {
+    margin-bottom: 30px;
+  }
+
+  &__title {
+    font-size: 18px;
+  }
+
+  &__body {
+
+  }
+}

@@ -11,6 +11,8 @@ import Radio from '@/pages/components/Radio.vue'
 import Switch from '@/pages/components/Switch.vue'
 import Select from '@/pages/components/Select.vue'
 import Comment from '@/pages/components/Comment.vue'
+import Icons from '@/pages/components/Icons.vue'
+import Dialog from '@/pages/components/Dialog.vue'
 
 const componentsRoutes = [
   {
@@ -77,8 +79,17 @@ const componentsRoutes = [
     path: '/components/comment',
     name: 'CommentsPage',
     component: Comment
+  },
+  {
+    path: '/components/icons',
+    name: 'IconsPage',
+    component: Icons
+  },
+  {
+    path: '/components/dialog',
+    name: 'DialogPage',
+    component: Dialog
   }
-
 ]
 
 export default componentsRoutes

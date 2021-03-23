@@ -1,0 +1,14 @@
+.v-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1050;
+
+  background-color: rgba(35, 46, 60, .15);
+
+  &--blur {
+    backdrop-filter: blur(4px);
+  }
+}

@@ -16,7 +16,8 @@ import AppHeaderMenu from '@/components/AppHeaderMenu'
 import Logo from '@/components/Logo'
 import DocumentationMenu from '@/components/DocumentationMenu'
 import Page from '@/components/Page'
-import Example from '@/components/Example'
+import Example from '@/components/Example/Example'
+import ExampleGroup from '@/components/Example/ExampleGroup'
 
 const app = createApp(App)
 
@@ -28,8 +29,9 @@ app.component(Logo.name, Logo)
 app.component(DocumentationMenu.name, DocumentationMenu)
 app.component(Page.name, Page)
 app.component(Example.name, Example)
+app.component(ExampleGroup.name, ExampleGroup)
 
 app.use(VueUI)
-
 app.use(router)
+
 app.mount('#app')

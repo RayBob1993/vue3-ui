@@ -11,6 +11,7 @@
         'v-button--expanded': expanded,
         'v-button--outline': outline,
         'v-button--loading': loading,
+        'v-button--square': square
       },
     ]"
     :disabled="isDisabled"
@@ -39,10 +40,7 @@
   export default {
     name: 'VButton',
     props: {
-      label: {
-        type: String,
-        default: '',
-      },
+      label: String,
       type: {
         type: String,
         default: 'default',
@@ -65,10 +63,7 @@
         ],
         default: null,
       },
-      icon: {
-        type: String,
-        default: '',
-      },
+      icon: String,
       size: {
         type: String,
         validator: isValidComponentSize
@@ -84,6 +79,7 @@
       },
       loading: Boolean,
       outline: Boolean,
+      square: Boolean,
       rounded: Boolean,
       disabled: Boolean,
       expanded: Boolean,

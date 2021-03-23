@@ -3,11 +3,14 @@
   justify-content: center;
   align-items: center;
   margin: 0;
+  border: 0;
   padding: $button-size-default;
 
   cursor: pointer;
   border-radius: $border-radius-default;
   transition: $transition-base;
+
+  background-color: transparent;
 
   text-align: center;
   line-height: $line-height;
@@ -15,7 +18,7 @@
   text-transform: none;
   text-shadow: none;
   text-decoration: none;
-  font-weight: normal;
+  font-weight: 500;
   font-size: $font-size-default;
 
   -webkit-tap-highlight-color: transparent;

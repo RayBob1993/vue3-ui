@@ -1,9 +1,10 @@
 .v-button {
   position: relative;
 
+  @include button-base();
+
   border: 1px solid transparent;
 
-  @include button-base();
   @include utils-user-select(none);
   @include utils-appearance(none);
 
@@ -32,7 +33,7 @@
 
       color: $color-default-outline-text;
 
-      &:not(.button--disabled) {
+      &:not(.v-button--disabled) {
         &:focus,
         &:hover {
           background-color: $color-default-hover;
@@ -43,7 +44,7 @@
       }
     }
 
-    &:not(.button--disabled) {
+    &:not(.v-button--disabled) {
       &:focus,
       &:hover {
         background-color: $color-default-hover;
@@ -69,7 +70,7 @@
 
       color: $color-secondary-outline-text;
 
-      &:not(.button--disabled) {
+      &:not(.v-button--disabled) {
         &:focus,
         &:hover {
           background-color: $color-secondary-hover;
@@ -80,7 +81,7 @@
       }
     }
 
-    &:not(.button--disabled) {
+    &:not(.v-button--disabled) {
       &:focus,
       &:hover {
         background-color: $color-secondary-hover;
@@ -106,7 +107,7 @@
 
       color: $color-primary-outline-text;
 
-      &:not(.button--disabled) {
+      &:not(.v-button--disabled) {
         &:focus,
         &:hover {
           background-color: $color-primary-hover;
@@ -117,7 +118,7 @@
       }
     }
 
-    &:not(.button--disabled) {
+    &:not(.v-button--disabled) {
       &:focus,
       &:hover {
         background-color: $color-primary-hover;
@@ -143,7 +144,7 @@
 
       color: $color-success-outline-text;
 
-      &:not(.button--disabled) {
+      &:not(.v-button--disabled) {
         &:focus,
         &:hover {
           background-color: $color-success-hover;
@@ -154,7 +155,7 @@
       }
     }
 
-    &:not(.button--disabled) {
+    &:not(.v-button--disabled) {
       &:focus,
       &:hover {
         background-color: $color-success-hover;
@@ -180,7 +181,7 @@
 
       color: $color-danger-outline-text;
 
-      &:not(.button--disabled) {
+      &:not(.v-button--disabled) {
         &:focus,
         &:hover {
           background-color: $color-danger-hover;
@@ -191,7 +192,7 @@
       }
     }
 
-    &:not(.button--disabled) {
+    &:not(.v-button--disabled) {
       &:focus,
       &:hover {
         background-color: $color-danger-hover;
@@ -217,7 +218,7 @@
 
       color: $color-warning-outline-text;
 
-      &:not(.button--disabled) {
+      &:not(.v-button--disabled) {
         &:focus,
         &:hover {
           background-color: $color-warning-hover;
@@ -228,7 +229,7 @@
       }
     }
 
-    &:not(.button--disabled) {
+    &:not(.v-button--disabled) {
       &:focus,
       &:hover {
         background-color: $color-warning-hover;
@@ -254,7 +255,7 @@
 
       color: $color-info-outline-text;
 
-      &:not(.button--disabled) {
+      &:not(.v-button--disabled) {
         &:focus,
         &:hover {
           background-color: $color-info-hover;
@@ -265,7 +266,7 @@
       }
     }
 
-    &:not(.button--disabled) {
+    &:not(.v-button--disabled) {
       &:focus,
       &:hover {
         background-color: $color-info-hover;
@@ -325,6 +326,10 @@
     border-radius: $border-radius-circle;
 
     padding: $button-circle-size-default;
+  }
+
+  &--square {
+    border-radius: 0;
   }
 
   &--disabled {
