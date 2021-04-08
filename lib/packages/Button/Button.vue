@@ -4,7 +4,7 @@
     :class="[
       `v-button--${type}`,
       {
-        [`v-button--${size}`]: size,
+        [`v-button--size-${size}`]: size,
         'v-button--rounded': rounded,
         'v-button--circle': circle,
         'v-button--disabled': isDisabled,
@@ -21,20 +21,42 @@
     @blur="onBlur"
     @focus="onFocus"
   >
-    <span
-      v-if="label"
-      class="v-button__label"
-    >
-      {{ label }}
-    </span>
+    <template v-if="!$slots.default">
+      <v-icon
+        v-if="isIconAlignLeft"
+        :class="{
+          'v-icon--left': isIconAlignLeft
+        }"
+        :name="icon"
+      />
 
-    <slot :isDisabled="isDisabled"/>
+      <span
+        v-if="label"
+        class="v-button__label"
+      >
+        {{ label }}
+      </span>
+
+      <v-icon
+        v-if="isIconAlignRight"
+        :class="{
+          'v-icon--right': isIconAlignRight
+        }"
+        :name="icon"
+      />
+    </template>
+
+    <slot
+      v-else
+      :isDisabled="isDisabled"
+      :label="label"
+    />
   </button>
 </template>
 
 <script>
   import { computed, inject } from 'vue'
-  import { isValidComponentSize } from '../../utils/validators'
+  import { isValidComponentSize, isValidDirection } from '../../utils/validators'
   import { FORM_KEY, FORM_ITEM_KEY, BUTTON_GROUP_KEY } from '../../utils/keys'
 
   export default {
@@ -64,8 +86,17 @@
         default: null,
       },
       icon: String,
+      iconAlign: {
+        type: String,
+        default: 'left',
+        validator: value => [
+          'left',
+          'right'
+        ].includes(value)
+      },
       size: {
         type: String,
+        default: 'default',
         validator: isValidComponentSize
       },
       nativeType: {
@@ -104,6 +135,9 @@
           props.loading
       })
 
+      const isIconAlignLeft = computed(() => props.icon && props.iconAlign === 'left')
+      const isIconAlignRight = computed(() => props.icon && props.iconAlign === 'right')
+
       function onClick (event) {
         emit('click', event)
       }
@@ -118,6 +152,8 @@
 
       return {
         isDisabled,
+        isIconAlignLeft,
+        isIconAlignRight,
         onClick,
         onBlur,
         onFocus

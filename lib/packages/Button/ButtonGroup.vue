@@ -15,6 +15,7 @@
 </template>
 
 <script>
+  import { isValidDirection } from '../../utils/validators'
   import { provide, inject, computed, readonly } from 'vue'
   import { FORM_KEY, FORM_ITEM_KEY, BUTTON_GROUP_KEY } from '../../utils/keys'
 
@@ -24,10 +25,7 @@
       direction: {
         type: String,
         default: 'horizontal',
-        validator: value => [
-          'horizontal',
-          'vertical'
-        ].includes(value)
+        validator: isValidDirection
       },
       fluid: Boolean,
       disabled: Boolean

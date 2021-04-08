@@ -4,9 +4,9 @@
   left: 0;
   right: 0;
   bottom: 0;
-  z-index: 1050;
+  z-index: 2000;
 
-  background-color: rgba(35, 46, 60, .15);
+  background-color: rgba($color-black, .3);
 
   &--blur {
     backdrop-filter: blur(4px);

@@ -12,7 +12,7 @@
       <v-overlay
         v-show="modelValue"
         :blur="blur"
-        @click="onOverlayClick"
+        @click="onCloseModal"
       >
         <div
           class="v-dialog"
@@ -37,7 +37,7 @@
                 aria-label="Закрыть окно"
                 @click="onCloseModal"
               >
-
+                <v-icon name="close"/>
               </button>
 
               <slot
@@ -65,14 +65,16 @@
 
 <script>
   import { computed } from 'vue'
-  import { UPDATE_MODEL_EVENT } from '../../utils/constants'
+  import {
+    useDialog,
+    CLOSE_EVENT,
+    OPEN_EVENT,
+    CLOSED_EVENT,
+    OPENED_EVENT,
+    UPDATE_MODEL_EVENT
+  } from './useDialog'
   import { isValidComponentSize } from '../../utils/validators'
   import VOverlay from '../Overlay'
-
-  const CLOSE_EVENT = 'close'
-  const OPEN_EVENT = 'open'
-  const CLOSED_EVENT = 'closed'
-  const OPENED_EVENT = 'opened'
 
   export default {
     name: 'VDialog',
@@ -99,7 +101,7 @@
         type: Boolean,
         default: true
       },
-      closeOnPressEscape: {
+      closeOnEscape: {
         type: Boolean,
         default: true
       },
@@ -123,37 +125,12 @@
       CLOSED_EVENT,
       OPENED_EVENT
     ],
-    setup (props, { emit }) {
+    setup (props) {
       const ariaLabel = computed(() => props.title || 'dialog')
 
-      function onCloseModal () {
-        emit(UPDATE_MODEL_EVENT, false)
-      }
-
-      function onAfterEnter () {
-        emit(OPENED_EVENT)
-      }
-
-      function onAfterLeave () {
-        emit(CLOSED_EVENT)
-        emit(UPDATE_MODEL_EVENT, false)
-      }
-
-      function onBeforeLeave () {
-        emit(CLOSE_EVENT)
-      }
-
-      function onOverlayClick () {
-        onAfterLeave()
-      }
-
       return {
-        ariaLabel,
-        onCloseModal,
-        onAfterEnter,
-        onAfterLeave,
-        onBeforeLeave,
-        onOverlayClick
+        ...useDialog(props),
+        ariaLabel
       }
     }
   }

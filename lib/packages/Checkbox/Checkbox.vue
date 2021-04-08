@@ -55,8 +55,8 @@
     emits: [
       UPDATE_MODEL_EVENT
     ],
-    setup (props) {
-      return useCheckbox(props)
+    setup (props, content) {
+      return useCheckbox(props, content)
     }
   }
 </script>

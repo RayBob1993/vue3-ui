@@ -6,7 +6,10 @@
         anchor="button-types"
       >
         <template #view>
-          <v-button label="default"/>
+          <v-button
+            icon="close"
+            label="default"
+          />
 
           <v-button
             type="primary"
@@ -244,7 +247,7 @@
       >
         <template #view>
           <v-button
-            label="1"
+            icon="close"
             circle
           />
 

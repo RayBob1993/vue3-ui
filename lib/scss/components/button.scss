@@ -21,6 +21,21 @@
     font-weight: inherit;
   }
 
+  .v-icon {
+    width: 20px;
+    height: 20px;
+
+    &--right {
+      margin-left: 5px;
+    }
+
+    &--left {
+      & + .v-button__label {
+        margin-left: 5px;
+      }
+    }
+  }
+
   // Types
   &--default {
     background-color: $color-default;
@@ -293,28 +308,39 @@
   }
 
   // Sizes
-  &--large {
-    padding: $button-size-lg;
+  &--size-large {
+    min-height: $button-size-lg-height;
+    padding: $button-size-lg-padding;
 
     font-size: $font-size-lg;
   }
 
-  &--medium {
-    padding: $button-size-md;
+  &--size-medium {
+    min-height: $button-size-md-height;
+    padding: $button-size-md-padding;
 
     font-size: $font-size-md;
   }
 
-  &--small {
-    padding: $button-size-sm;
+  &--size-small {
+    min-height: $button-size-sm-height;
+    padding: $button-size-sm-padding;
 
     font-size: $font-size-sm;
   }
 
-  &--mini {
-    padding: $button-size-xs;
+  &--size-mini {
+    min-height: $button-size-xs-height;
+    padding: $button-size-xs-padding;
 
     font-size: $font-size-xs;
+  }
+
+  &--size-default {
+    min-height: $button-size-default-height;
+    padding: $button-size-default-padding;
+
+    font-size: $font-size-default;
   }
 
   // States
@@ -325,7 +351,11 @@
   &--circle {
     border-radius: $border-radius-circle;
 
-    padding: $button-circle-size-default;
+    padding: $button-circle-size-default-padding;
+
+    &.v-button--size-default {
+      min-width: $button-circle-size-default-height;
+    }
   }
 
   &--square {

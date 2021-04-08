@@ -61,8 +61,8 @@
       'focus',
       'blur'
     ],
-    setup (props) {
-      return useRadio(props)
+    setup (props, context) {
+      return useRadio(props, context)
     }
   }
 </script>

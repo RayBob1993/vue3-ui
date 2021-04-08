@@ -61,8 +61,8 @@
       'focus',
       'blur'
     ],
-    setup (props) {
-      return useCheckbox(props)
+    setup (props, context) {
+      return useCheckbox(props, context)
     }
   }
 </script>

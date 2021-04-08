@@ -13,6 +13,7 @@ import Select from '@/pages/components/Select.vue'
 import Comment from '@/pages/components/Comment.vue'
 import Icons from '@/pages/components/Icons.vue'
 import Dialog from '@/pages/components/Dialog.vue'
+import Card from '@/pages/components/Card.vue'
 
 const componentsRoutes = [
   {
@@ -89,6 +90,11 @@ const componentsRoutes = [
     path: '/components/dialog',
     name: 'DialogPage',
     component: Dialog
+  },
+  {
+    path: '/components/card',
+    name: 'CardPage',
+    component: Card
   }
 ]
 

@@ -21,7 +21,6 @@
     ],
     setup (props, { emit }) {
       function onClick () {
-        console.log('click')
         emit('click')
       }
 

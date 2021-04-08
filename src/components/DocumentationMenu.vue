@@ -226,6 +226,10 @@
           url: null,
           list: [
             {
+              title: 'Cards',
+              url: '/components/card'
+            },
+            {
               title: 'Dividers',
               url: '/components/dividers'
             },
