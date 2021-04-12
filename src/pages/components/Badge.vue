@@ -40,7 +40,7 @@
 
 <script>
   export default {
-    name: 'Badge',
+    name: 'BadgePage',
     setup () {
 
     }

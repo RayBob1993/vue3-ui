@@ -1,0 +1,182 @@
+.v-alert {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: flex-start;
+  padding: 15px;
+  border: 1px solid;
+
+  border-radius: $border-radius-default;
+
+  &:not(&--important) {
+    border-left-width: 4px;
+  }
+
+  &--closable {
+    position: relative;
+
+    padding-right: 50px;
+  }
+
+  &--center {
+    text-align: center;
+  }
+
+  &--default {
+    border-color: $color-default;
+  }
+
+  &--success {
+    border-color: $color-success;
+
+    .v-icon {
+      stroke: $color-success;
+    }
+
+    .v-alert__title {
+      color: $color-success;
+    }
+  }
+
+  &--primary {
+    border-color: $color-primary;
+
+    .v-icon {
+      stroke: $color-primary;
+    }
+
+    .v-alert__title {
+      color: $color-primary;
+    }
+  }
+
+  &--danger {
+    border-color: $color-danger;
+
+    .v-icon {
+      stroke: $color-danger;
+    }
+
+    .v-alert__title {
+      color: $color-danger;
+    }
+  }
+
+  &--warning {
+    border-color: $color-warning;
+
+    .v-icon {
+      stroke: $color-warning;
+    }
+
+    .v-alert__title {
+      color: $color-warning;
+    }
+  }
+
+  &--important {
+    &.v-alert--default {
+      background-color: $color-default;
+    }
+
+    &.v-alert--success {
+      background-color: $color-success;
+
+      .v-icon {
+        stroke: $color-success-text;
+      }
+
+      .v-alert__title,
+      .v-alert__text {
+        color: $color-success-text;
+      }
+    }
+
+    &.v-alert--primary {
+      background-color: $color-primary;
+
+      .v-icon {
+        stroke: $color-primary-text;
+      }
+
+      .v-alert__title,
+      .v-alert__text {
+        color: $color-primary-text;
+      }
+    }
+
+    &.v-alert--danger {
+      background-color: $color-danger;
+
+      .v-icon {
+        stroke: $color-danger-text;
+      }
+
+      .v-alert__title,
+      .v-alert__text {
+        color: $color-danger-text;
+      }
+    }
+
+    &.v-alert--warning {
+      background-color: $color-warning;
+
+      .v-icon {
+        stroke: $color-warning-text;
+      }
+
+      .v-alert__title,
+      .v-alert__text {
+        color: $color-warning-text;
+      }
+    }
+  }
+
+  &__icon {
+    margin-right: 15px;
+
+    .v-icon {
+      display: block;
+      margin: -2px 0;
+      width: 24px;
+      height: 24px;
+    }
+  }
+
+  &__content {
+    flex: 1;
+  }
+
+  &__title {
+    margin-bottom: 10px;
+  }
+
+  &__text {
+    color: $color-gray-dark;
+    line-height: 20px;
+  }
+
+  &__close {
+    @include button-base();
+
+    padding: 15px;
+
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 10;
+
+    &:hover {
+      .v-icon {
+        opacity: 1;
+      }
+    }
+
+    .v-icon {
+      width: 18px;
+      height: 18px;
+
+      stroke: $color-black;
+      opacity: .5;
+    }
+  }
+}

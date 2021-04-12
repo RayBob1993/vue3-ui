@@ -477,6 +477,6 @@
 
 <script>
   export default {
-    name: 'Buttons'
+    name: 'ButtonsPage'
   }
 </script>

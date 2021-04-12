@@ -14,6 +14,7 @@ import Comment from '@/pages/components/Comment.vue'
 import Icons from '@/pages/components/Icons.vue'
 import Dialog from '@/pages/components/Dialog.vue'
 import Card from '@/pages/components/Card.vue'
+import Alert from '@/pages/components/Alert.vue'
 
 const componentsRoutes = [
   {
@@ -95,6 +96,11 @@ const componentsRoutes = [
     path: '/components/card',
     name: 'CardPage',
     component: Card
+  },
+  {
+    path: '/components/alert',
+    name: 'AlertsPage',
+    component: Alert
   }
 ]
 

@@ -8,6 +8,10 @@
     border-color: $color-default;
   }
 
+  &--primary {
+    border-color: $color-primary;
+  }
+
   &--success {
     border-color: $color-success;
   }

@@ -87,30 +87,47 @@
         <template #view>
           <v-row>
             <v-col size="4">
-              <v-card
-                type="success"
-                title="Заголовок карточки"
-                subtitle="Подзаголовок карточки"
-                description="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam deleniti fugit incidunt, iste, itaque minima neque pariatur perferendis sed suscipit velit vitae voluptatem."
-              />
+              <example-group>
+                <v-card
+                  type="primary"
+                  title="Заголовок карточки"
+                  subtitle="Подзаголовок карточки"
+                  description="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam deleniti fugit incidunt, iste, itaque minima neque pariatur perferendis sed suscipit velit vitae voluptatem."
+                />
+              </example-group>
             </v-col>
 
             <v-col size="4">
-              <v-card
-                type="danger"
-                title="Заголовок карточки"
-                subtitle="Подзаголовок карточки"
-                description="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam deleniti fugit incidunt, iste, itaque minima neque pariatur perferendis sed suscipit velit vitae voluptatem."
-              />
+              <example-group>
+                <v-card
+                  type="success"
+                  title="Заголовок карточки"
+                  subtitle="Подзаголовок карточки"
+                  description="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam deleniti fugit incidunt, iste, itaque minima neque pariatur perferendis sed suscipit velit vitae voluptatem."
+                />
+              </example-group>
             </v-col>
 
             <v-col size="4">
-              <v-card
-                type="warning"
-                title="Заголовок карточки"
-                subtitle="Подзаголовок карточки"
-                description="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam deleniti fugit incidunt, iste, itaque minima neque pariatur perferendis sed suscipit velit vitae voluptatem."
-              />
+              <example-group>
+                <v-card
+                  type="danger"
+                  title="Заголовок карточки"
+                  subtitle="Подзаголовок карточки"
+                  description="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam deleniti fugit incidunt, iste, itaque minima neque pariatur perferendis sed suscipit velit vitae voluptatem."
+                />
+              </example-group>
+            </v-col>
+
+            <v-col size="4">
+              <example-group>
+                <v-card
+                  type="warning"
+                  title="Заголовок карточки"
+                  subtitle="Подзаголовок карточки"
+                  description="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam deleniti fugit incidunt, iste, itaque minima neque pariatur perferendis sed suscipit velit vitae voluptatem."
+                />
+              </example-group>
             </v-col>
           </v-row>
         </template>
@@ -156,8 +173,6 @@
 </template>
 
 <script>
-  import { ref } from 'vue'
-
   export default {
     name: 'CardPage',
   }
