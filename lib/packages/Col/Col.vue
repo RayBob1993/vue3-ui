@@ -18,18 +18,7 @@
         type: String,
         default: 'div',
       },
-      size: {
-        type: [String, Number],
-        validator: value => {
-          const typeOf = typeof value;
-
-          if (typeOf === 'string') {
-            const values = ['auto'];
-
-            return values.includes(value);
-          }
-        }
-      },
+      size: [String, Number],
       offset: {
         type: Number,
         default: null,
@@ -87,8 +76,8 @@
           {
             [`v-col-${props.size}`]: props.size,
             [`v-col-offset-${props.offset}`]: props.offset,
-            [`v-col-order-${props.order}`]: props.order,
-          },
+            [`v-col-order-${props.order}`]: props.order
+          }
         ];
 
         const definitions = [
@@ -97,7 +86,7 @@
           'md',
           'lg',
           'xl',
-          'xxl',
+          'xxl'
         ];
 
         definitions.forEach(definition => {

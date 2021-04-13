@@ -17,10 +17,38 @@
     }
   }
 
-  &--large {}
-  &--medium {}
-  &--small {}
-  &--mini {}
+  &--size-lg {
+    .v-checkbox-button__content {
+      padding: $button-size-lg-padding;
+    }
+  }
+
+  &--size-md {
+    .v-checkbox-button__content {
+      padding: $button-size-md-padding;
+    }
+  }
+
+  &--size-sm {
+    .v-checkbox-button__content {
+      padding: $button-size-sm-padding;
+    }
+  }
+
+  &--size-xs {
+    .v-checkbox-button__content {
+      padding: $button-size-xs-padding;
+    }
+  }
+
+  &--size-default {
+    .v-checkbox-button__content {
+      min-height: $button-size-default-height;
+      padding: $button-size-default-padding;
+
+      font-size: $font-size-default;
+    }
+  }
 
   &__native {
     @include hidden-input();

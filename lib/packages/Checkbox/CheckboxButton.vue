@@ -1,11 +1,13 @@
 <template>
   <label
     class="v-checkbox-button"
-    :class="{
-      [`v-checkbox-button--${size}`]: size,
-      'v-checkbox-button--checked': isChecked,
-      'v-checkbox-button--disabled': isDisabled
-    }"
+    :class="[
+      `v-checkbox-button--size-${size}`,
+      {
+        'v-checkbox-button--checked': isChecked,
+        'v-checkbox-button--disabled': isDisabled
+      }
+    ]"
   >
     <input
       type="checkbox"
@@ -52,6 +54,7 @@
       checked: Boolean,
       size: {
         type: String,
+        default: 'default',
         validator: isValidComponentSize,
       }
     },

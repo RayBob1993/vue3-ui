@@ -19,11 +19,13 @@
           role="dialog"
           :aria-label="ariaLabel"
           aria-modal="true"
-          :class="{
-            [`v-dialog__modal--${size}`]: size,
-            'v-dialog--center': center,
-            'v-dialog--fullscreen': fullscreen
-          }"
+          :class="[
+            `v-dialog--size-${size}`,
+            {
+              'v-dialog--center': center,
+              'v-dialog--fullscreen': fullscreen
+            }
+          ]"
           @click.stop=""
         >
           <div class="v-dialog__content">
@@ -115,6 +117,7 @@
       },
       size: {
         type: String,
+        default: 'default',
         validator: isValidComponentSize
       },
     },
@@ -125,11 +128,11 @@
       CLOSED_EVENT,
       OPENED_EVENT
     ],
-    setup (props) {
+    setup (props, context) {
       const ariaLabel = computed(() => props.title || 'dialog')
 
       return {
-        ...useDialog(props),
+        ...useDialog(props, context),
         ariaLabel
       }
     }

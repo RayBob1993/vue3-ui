@@ -1,22 +1,25 @@
 .v-dialog {
   position: relative;
 
-  max-width: 540px;
   margin: 20px auto;
 
-  &--large {
+  &--size-default {
+    max-width: 540px;
+  }
+
+  &--size-lg {
     max-width: 1000px;
   }
 
-  &--medium {
+  &--size-md {
     max-width: 720px;
   }
 
-  &--small {
+  &--size-sm {
     max-width: 380px;
   }
 
-  &--mini {
+  &--size-xs {
     max-width: 300px;
   }
 
@@ -75,6 +78,8 @@
     right: 0;
     bottom: 0;
     z-index: 10;
+
+    padding: 15px;
 
     &:hover {
       .v-icon {

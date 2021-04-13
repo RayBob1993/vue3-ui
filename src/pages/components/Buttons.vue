@@ -85,6 +85,129 @@
       </example>
 
       <example
+        title="Размеры групп кнопок"
+        anchor="button-group-sizes"
+      >
+        <template #view>
+          <example-group title="Mini группа">
+            <v-button-group size="mini">
+              <v-button
+                type="warning"
+                label="mini"
+              />
+
+              <v-button
+                type="warning"
+                label="mini"
+              />
+
+              <v-button
+                type="warning"
+                label="mini"
+              />
+
+              <v-button
+                type="warning"
+                label="mini"
+              />
+
+              <v-button
+                type="warning"
+                label="mini"
+              />
+            </v-button-group>
+          </example-group>
+
+          <example-group title="Small группа">
+            <v-button-group size="small">
+              <v-button
+                type="warning"
+                label="small"
+              />
+
+              <v-button
+                type="warning"
+                label="small"
+              />
+
+              <v-button
+                type="warning"
+                label="small"
+              />
+
+              <v-button
+                type="warning"
+                label="small"
+              />
+
+              <v-button
+                type="warning"
+                label="small"
+              />
+            </v-button-group>
+          </example-group>
+
+          <example-group title="Medium группа">
+            <v-button-group size="medium">
+              <v-button
+                type="warning"
+                label="medium"
+              />
+
+              <v-button
+                type="warning"
+                label="medium"
+              />
+
+              <v-button
+                type="warning"
+                label="medium"
+              />
+
+              <v-button
+                type="warning"
+                label="medium"
+              />
+
+              <v-button
+                type="warning"
+                label="medium"
+              />
+            </v-button-group>
+          </example-group>
+
+          <example-group title="Large группа">
+            <v-button-group size="large">
+              <v-button
+                type="warning"
+                label="large"
+              />
+
+              <v-button
+                type="warning"
+                label="large"
+              />
+
+              <v-button
+                type="warning"
+                label="large"
+              />
+
+              <v-button
+                type="warning"
+                label="large"
+              />
+
+              <v-button
+                type="warning"
+                label="large"
+              />
+            </v-button-group>
+          </example-group>
+        </template>
+      </example>
+
+      <example
         title="Лоадер"
         anchor="button-loading"
       >
@@ -403,7 +526,7 @@
       >
         <template #view>
           <v-button-group>
-            <v-button label="default"/>
+            <v-button label="default" size="mini"/>
             <v-button label="default"/>
             <v-button label="default"/>
           </v-button-group>

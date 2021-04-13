@@ -10,6 +10,10 @@
     }
   }
 
+  &--limit {
+    margin-bottom: 5px;
+  }
+
   &--focused {}
   &--exceed {}
   &--icon-before {}
@@ -18,16 +22,40 @@
   &--addon-after {}
   &--readonly {}
 
-  &--mini {}
-  &--small {}
-  &--medium {}
-  &--large {}
+  &--size-default {
+    .v-input__native {
+      padding: 10px 20px;
+    }
+  }
+
+  &--size-lg {
+    .v-input__native {
+
+    }
+  }
+
+  &--size-md {
+    .v-input__native {
+
+    }
+  }
+
+  &--size-sm {
+    .v-input__native {
+
+    }
+  }
+
+  &--size-xs {
+    .v-input__native {
+
+    }
+  }
 
   &__native {
     display: block;
     width: 100%;
 
-    padding: 10px 20px;
     margin: 0;
     border: 1px solid #ccc;
 
@@ -52,15 +80,30 @@
     &-buttons {
       position: absolute;
       top: 0;
-      right: 0;
+      right: 5px;
+      bottom: 0;
 
       display: flex;
       flex-flow: row wrap;
     }
 
     &-button {
-      &:not(:last-child) {
-        margin-right: 5px;
+      @include button-base();
+
+      padding: 5px;
+
+      &:hover {
+        .v-icon {
+          opacity: 1;
+        }
+      }
+
+      .v-icon {
+        width: 18px;
+        height: 18px;
+
+        stroke: $color-black;
+        opacity: .5;
       }
 
       &--password {}
@@ -70,8 +113,11 @@
 
   &__count {
     position: absolute;
-    top: 100%;
+    top: calc(100% + 5px);
     right: 0;
+
+    color: $color-gray-dark;
+    font-size: 12px;
 
     &-current {}
     &-divider {}

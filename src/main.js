@@ -18,6 +18,7 @@ import DocumentationMenu from '@/components/DocumentationMenu'
 import Page from '@/components/Page'
 import Example from '@/components/Example/Example'
 import ExampleGroup from '@/components/Example/ExampleGroup'
+import ExampleIcon from '@/components/Example/ExampleIcon'
 
 const app = createApp(App)
 
@@ -30,6 +31,7 @@ app.component(DocumentationMenu.name, DocumentationMenu)
 app.component(Page.name, Page)
 app.component(Example.name, Example)
 app.component(ExampleGroup.name, ExampleGroup)
+app.component(ExampleIcon.name, ExampleIcon)
 
 app.use(VueUI)
 app.use(router)

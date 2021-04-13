@@ -1,11 +1,13 @@
 <template>
   <label
     class="v-radio-button"
-    :class="{
-      [`v-radio-button--${size}`]: size,
-      'v-radio-button--checked': isChecked,
-      'v-radio-button--disabled': isDisabled
-    }"
+    :class="[
+      `v-radio-button--size-${size}`,
+      {
+        'v-radio-button--checked': isChecked,
+        'v-radio-button--disabled': isDisabled
+      }
+    ]"
   >
     <input
       type="radio"
@@ -52,6 +54,7 @@
       checked: Boolean,
       size: {
         type: String,
+        default: 'default',
         validator: isValidComponentSize,
       }
     },

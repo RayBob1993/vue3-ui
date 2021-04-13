@@ -2,8 +2,9 @@
   <div
     class="v-input"
     :class="[
+      `v-input--size-${size}`,
+      `v-input--${type}`,
       {
-        [`v-input--${size}`]: size,
         'v-input--disabled': isDisabled,
         'v-input--focused': focus,
         'v-input--exceed': isExceed,
@@ -12,8 +13,10 @@
         'v-input--addon-before': addonBefore,
         'v-input--addon-after': addonAfter,
         'v-input--readonly': isReadonly,
+        'v-input--clearable': clearable,
+        'v-input--loading': loading,
+        'v-input--limit': showLimit
       },
-      `v-input--${type}`,
     ]"
   >
     <div
@@ -88,7 +91,7 @@
           class="v-input__control-button v-input__control-button--password"
           @click="onTogglePasswordVisible"
         >
-          ?
+          <v-icon :name="passwordIconVisible"/>
         </button>
 
         <button
@@ -96,7 +99,7 @@
           class="v-input__control-button v-input__control-button--clear"
           @click="onClear"
         >
-          x
+          <v-icon name="close"/>
         </button>
       </div>
     </div>
@@ -177,6 +180,7 @@
       },
       size: {
         type: String,
+        default: 'default',
         validator: isValidComponentSize
       },
       limitDivider: {
@@ -215,7 +219,8 @@
       const isDisabled = computed(() => {
         return Form && Form.disabled ||
           FormItem && FormItem.disabled ||
-          props.disabled
+          props.disabled ||
+          props.loading
       })
 
       const isReadonly = computed(() => {
@@ -233,8 +238,8 @@
         get: () => props.modelValue,
         set: value => emit(UPDATE_MODEL_EVENT, value)
       });
-      const maxLength = computed(() => Number(attrs.maxlength));
-      const valueLength = computed(() => value.value.length);
+      const maxLength = computed(() => parseInt(attrs.maxlength));
+      const valueLength = computed(() => value.value.length || 0);
       const focus = ref(false);
 
       const isPasswordVisible = ref(false);
@@ -245,11 +250,12 @@
           !isReadonly.value &&
           !props.showPassword &&
           !slots.count &&
-          maxLength
+          attrs.maxlength
       });
       const isExceed = computed(() => props.showLimit && (valueLength.value >= maxLength.value));
       const isClearButtonVisible = computed(() => props.clearable && Boolean(valueLength.value));
       const isPasswordButtonVisible = computed(() => props.showPassword && !isTextareaType.value);
+      const passwordIconVisible = computed(() => isPasswordVisible.value ? 'eye-off' : 'eye');
 
       const hasAddonBefore = computed(() => props.addonBefore || slots.addonBefore);
       const hasAddonAfter = computed(() => props.addonAfter || slots.addonAfter);
@@ -311,6 +317,7 @@
         isClearButtonVisible,
         isPasswordButtonVisible,
         isPasswordVisible,
+        passwordIconVisible,
         hasAddonBefore,
         hasAddonAfter,
         isDisabled,

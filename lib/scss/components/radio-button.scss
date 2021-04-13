@@ -17,10 +17,50 @@
     }
   }
 
-  &--large {}
-  &--medium {}
-  &--small {}
-  &--mini {}
+  &--size-default {
+    .v-radio-button__content {
+      padding: $button-size-default-padding;
+      min-height: $button-size-default-height;
+
+      font-size: $font-size-default;
+    }
+  }
+
+  &--size-lg {
+    .v-radio-button__content {
+      padding: $button-size-lg-padding;
+      min-height: $button-size-lg-height;
+
+      font-size: $font-size-lg;
+    }
+  }
+
+  &--size-md {
+    .v-radio-button__content {
+      padding: $button-size-md-padding;
+      min-height: $button-size-md-height;
+
+      font-size: $font-size-md;
+    }
+  }
+
+  &--size-sm {
+    .v-radio-button__content {
+      padding: $button-size-sm-padding;
+      min-height: $button-size-sm-height;
+
+      font-size: $font-size-sm;
+    }
+  }
+
+  &--size-xs {
+    .v-radio-button__content {
+      padding: $button-size-xs-padding;
+      min-height: $button-size-xs-height;
+
+      font-size: $font-size-xs;
+    }
+  }
 
   &__native {
     @include hidden-input();

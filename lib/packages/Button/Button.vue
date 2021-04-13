@@ -3,8 +3,8 @@
     class="v-button"
     :class="[
       `v-button--${type}`,
+      `v-button--size-${currentSize}`,
       {
-        [`v-button--size-${size}`]: size,
         'v-button--rounded': rounded,
         'v-button--circle': circle,
         'v-button--disabled': isDisabled,
@@ -12,7 +12,7 @@
         'v-button--outline': outline,
         'v-button--loading': loading,
         'v-button--square': square
-      },
+      }
     ]"
     :disabled="isDisabled"
     :type="nativeType"
@@ -56,7 +56,7 @@
 
 <script>
   import { computed, inject } from 'vue'
-  import { isValidComponentSize, isValidDirection } from '../../utils/validators'
+  import { isValidComponentSize } from '../../utils/validators'
   import { FORM_KEY, FORM_ITEM_KEY, BUTTON_GROUP_KEY } from '../../utils/keys'
 
   export default {
@@ -135,6 +135,8 @@
           props.loading
       })
 
+      const currentSize = computed(() => (ButtonGroup && ButtonGroup.size) || props.size)
+
       const isIconAlignLeft = computed(() => props.icon && props.iconAlign === 'left')
       const isIconAlignRight = computed(() => props.icon && props.iconAlign === 'right')
 
@@ -154,6 +156,7 @@
         isDisabled,
         isIconAlignLeft,
         isIconAlignRight,
+        currentSize,
         onClick,
         onBlur,
         onFocus

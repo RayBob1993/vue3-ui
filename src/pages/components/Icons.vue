@@ -6,14 +6,17 @@
         anchor="base-icons"
       >
         <template #view>
-          <v-icon
-            v-for="icon in icons"
-            :key="icon"
-            width="24"
-            height="24"
-            strokeWidth="1"
-            :name="icon"
-          />
+          <v-row>
+            <v-col
+              v-for="icon in icons"
+              :key="icon"
+              :size="2"
+              :xl="3"
+              :lg="4"
+            >
+              <example-icon :name="icon"/>
+            </v-col>
+          </v-row>
         </template>
       </example>
     </page>
@@ -27,7 +30,15 @@
     name: 'IconsPage',
     setup () {
       const icons = ref([
-        'zoom-question'
+        'zoom-question',
+        'check',
+        'close',
+        'info-circle',
+        'star',
+        'thumb-up',
+        'thumb-down',
+        'eye',
+        'eye-off'
       ])
 
       return {

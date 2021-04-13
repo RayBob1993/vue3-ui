@@ -2,11 +2,12 @@
   <div
     class="v-button-group"
     :class="[
+      `v-button-group--${direction}`,
+      `v-button-group--size-${size}`,
       {
         'v-button-group--fluid': fluid,
-        'v-button-group--disabled': isDisabled,
-      },
-      `v-button-group--${direction}`
+        'v-button-group--disabled': isDisabled
+      }
     ]"
     :aria-disabled="isDisabled"
   >
@@ -15,7 +16,7 @@
 </template>
 
 <script>
-  import { isValidDirection } from '../../utils/validators'
+  import { isValidComponentSize, isValidDirection } from '../../utils/validators'
   import { provide, inject, computed, readonly } from 'vue'
   import { FORM_KEY, FORM_ITEM_KEY, BUTTON_GROUP_KEY } from '../../utils/keys'
 
@@ -26,6 +27,11 @@
         type: String,
         default: 'horizontal',
         validator: isValidDirection
+      },
+      size: {
+        type: String,
+        default: 'default',
+        validator: isValidComponentSize,
       },
       fluid: Boolean,
       disabled: Boolean
