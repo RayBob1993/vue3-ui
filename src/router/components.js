@@ -15,6 +15,7 @@ import Icons from '@/pages/components/Icons.vue'
 import Dialog from '@/pages/components/Dialog.vue'
 import Card from '@/pages/components/Card.vue'
 import Alert from '@/pages/components/Alert.vue'
+import Avatar from '@/pages/components/Avatar.vue'
 
 const componentsRoutes = [
   {
@@ -101,6 +102,11 @@ const componentsRoutes = [
     path: '/components/alert',
     name: 'AlertsPage',
     component: Alert
+  },
+  {
+    path: '/components/avatar',
+    name: 'AvatarPage',
+    component: Avatar
   }
 ]
 

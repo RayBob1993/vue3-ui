@@ -38,7 +38,9 @@
         'thumb-up',
         'thumb-down',
         'eye',
-        'eye-off'
+        'eye-off',
+        'photo-off',
+        'photo'
       ])
 
       return {
