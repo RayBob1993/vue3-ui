@@ -27,8 +27,8 @@
 </template>
 
 <script>
-  import { isValidComponentSize, isValidType } from '../../utils/validators'
-  import VImage from '../Image'
+  import { isValidComponentSize, isValidType } from '../../utils/validators';
+  import VImage from '../Image';
 
   export default {
     name: 'VAvatar',
@@ -57,7 +57,7 @@
     setup () {
       return {
 
-      }
+      };
     }
-  }
+  };
 </script>

@@ -16,9 +16,9 @@
 </template>
 
 <script>
-  import { isValidComponentSize, isValidDirection } from '../../utils/validators'
-  import { provide, inject, computed, readonly } from 'vue'
-  import { FORM_KEY, FORM_ITEM_KEY, BUTTON_GROUP_KEY } from '../../utils/keys'
+  import { isValidComponentSize, isValidDirection } from '../../utils/validators';
+  import { provide, inject, computed, readonly } from 'vue';
+  import { FORM_KEY, FORM_ITEM_KEY, BUTTON_GROUP_KEY } from '../../utils/keys';
 
   export default {
     name: 'VButtonGroup',
@@ -37,20 +37,20 @@
       disabled: Boolean
     },
     setup (props) {
-      const Form = inject(FORM_KEY)
-      const FormItem = inject(FORM_ITEM_KEY)
+      const Form = inject(FORM_KEY);
+      const FormItem = inject(FORM_ITEM_KEY);
 
       const isDisabled = computed(() => {
         return Form && Form.disabled ||
           FormItem && FormItem.disabled ||
-          props.disabled
-      })
+          props.disabled;
+      });
 
-      provide(BUTTON_GROUP_KEY, readonly(props))
+      provide(BUTTON_GROUP_KEY, readonly(props));
 
       return {
         isDisabled
-      }
+      };
     }
-  }
+  };
 </script>

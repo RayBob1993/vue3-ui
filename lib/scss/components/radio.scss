@@ -27,12 +27,13 @@
     @include hidden-input();
 
     &:checked ~ .v-radio__input {
-      background-color: $color-blue;
       border-color: $color-blue;
 
+      background-color: $color-blue;
+
       &:before {
-        opacity: 1;
         visibility: visible;
+        opacity: 1;
       }
     }
   }
@@ -45,24 +46,25 @@
     margin-right: 8px;
     border: 1px solid $color-gray;
 
-    transition: $transition-base;
-
     border-radius: $border-radius-circle;
+
+    transition: $transition-base;
 
     &:before {
       position: absolute;
-      left: calc(50% - 3px);
       top: calc(50% - 3px);
+      left: calc(50% - 3px);
 
       width: 6px;
       height: 6px;
 
       border-radius: $border-radius-circle;
+
       background-color: $color-white;
+      visibility: hidden;
+      opacity: 0;
 
       transition: $transition-base;
-      opacity: 0;
-      visibility: hidden;
 
       content: '';
     }

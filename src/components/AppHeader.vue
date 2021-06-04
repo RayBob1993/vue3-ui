@@ -7,10 +7,9 @@
         </v-col>
 
         <v-col size="auto">
-          <AppHeaderMenu/>
+          <app-header-menu/>
         </v-col>
       </v-row>
-
     </v-container>
   </header>
 </template>
@@ -18,5 +17,5 @@
 <script>
   export default {
     name: 'AppHeader'
-  }
+  };
 </script>

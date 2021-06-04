@@ -21,5 +21,5 @@
     props: {
       title: String
     }
-  }
+  };
 </script>

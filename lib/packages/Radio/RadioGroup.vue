@@ -14,8 +14,8 @@
 </template>
 
 <script>
-  import { inject, provide, readonly, computed } from 'vue'
-  import { FORM_KEY, FORM_ITEM_KEY, RADIO_GROUP_KEY } from '../../utils/keys'
+  import { inject, provide, readonly, computed } from 'vue';
+  import { FORM_KEY, FORM_ITEM_KEY, RADIO_GROUP_KEY } from '../../utils/keys';
 
   export default {
     name: 'VRadioGroup',
@@ -34,20 +34,20 @@
       },
     },
     setup (props) {
-      const Form = inject(FORM_KEY)
-      const FormItem = inject(FORM_ITEM_KEY)
+      const Form = inject(FORM_KEY);
+      const FormItem = inject(FORM_ITEM_KEY);
 
       const isDisabled = computed(() => {
         return Form && Form.disabled ||
           FormItem && FormItem.disabled ||
-          props.disabled
-      })
+          props.disabled;
+      });
 
-      provide(RADIO_GROUP_KEY, readonly(props))
+      provide(RADIO_GROUP_KEY, readonly(props));
 
       return {
         isDisabled
-      }
+      };
     }
-  }
+  };
 </script>

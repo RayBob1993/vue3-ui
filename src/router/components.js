@@ -1,21 +1,21 @@
-import Components from '@/pages/components/Index.vue'
-import Buttons from '@/pages/components/Buttons.vue'
-import Images from '@/pages/components/Images.vue'
-import Inputs from '@/pages/components/Inputs.vue'
-import Grid from '@/pages/components/Grid.vue'
-import Badge from '@/pages/components/Badge.vue'
-import Dividers from '@/pages/components/Dividers.vue'
-import Form from '@/pages/components/Form.vue'
-import Checkbox from '@/pages/components/Checkbox.vue'
-import Radio from '@/pages/components/Radio.vue'
-import Switch from '@/pages/components/Switch.vue'
-import Select from '@/pages/components/Select.vue'
-import Comment from '@/pages/components/Comment.vue'
-import Icons from '@/pages/components/Icons.vue'
-import Dialog from '@/pages/components/Dialog.vue'
-import Card from '@/pages/components/Card.vue'
-import Alert from '@/pages/components/Alert.vue'
-import Avatar from '@/pages/components/Avatar.vue'
+import Components from '@/pages/components/Index.vue';
+import Buttons from '@/pages/components/Buttons.vue';
+import Images from '@/pages/components/Images.vue';
+import Inputs from '@/pages/components/Inputs.vue';
+import Grid from '@/pages/components/Grid.vue';
+import Badge from '@/pages/components/Badge.vue';
+import Dividers from '@/pages/components/Dividers.vue';
+import Form from '@/pages/components/Form.vue';
+import Checkbox from '@/pages/components/Checkbox.vue';
+import Radio from '@/pages/components/Radio.vue';
+import Switch from '@/pages/components/Switch.vue';
+import Select from '@/pages/components/Select.vue';
+import Comment from '@/pages/components/Comment.vue';
+import Icons from '@/pages/components/Icons.vue';
+import Dialog from '@/pages/components/Dialog.vue';
+import Card from '@/pages/components/Card.vue';
+import Alert from '@/pages/components/Alert.vue';
+import Avatar from '@/pages/components/Avatar.vue';
 
 const componentsRoutes = [
   {
@@ -108,6 +108,6 @@ const componentsRoutes = [
     name: 'AvatarPage',
     component: Avatar
   }
-]
+];
 
-export default componentsRoutes
+export default componentsRoutes;

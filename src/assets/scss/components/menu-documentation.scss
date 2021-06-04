@@ -4,14 +4,15 @@
   ul {
     margin: 0;
     padding: 0;
+
     list-style: none;
   }
 
   h3 {
+    margin: 0;
     padding: 10px 20px;
 
     font-size: 18px;
-    margin: 0;
   }
 
   li {
@@ -25,10 +26,11 @@
     padding: 5px 30px;
     border-left: 2px solid transparent;
 
-    text-decoration: none;
     color: #2c3e50;
     font-size: 16px;
     line-height: 1.4;
+
+    text-decoration: none;
 
     &.router-link-active,
     &:hover {

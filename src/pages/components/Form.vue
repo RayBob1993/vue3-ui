@@ -7,10 +7,10 @@
       >
         <template #view>
           <v-form
+            v-slot="{ isValid, isDisabled, isReadonly }"
             :disabled="disabledForm"
             :model="form.model"
             :rules="form.rules"
-            v-slot="{ isValid, isDisabled, isReadonly }"
           >
             <v-form-item>
               isValid: {{ isValid }}<br>
@@ -76,9 +76,9 @@
             <v-form-item prop="policy">
               <v-switch
                 v-model="form.model.policy"
-                :activeValue="true"
-                :inactiveValue="false"
-                activeText="Согласен с условиями"
+                :active-value="true"
+                :inactive-value="false"
+                active-text="Согласен с условиями"
               />
             </v-form-item>
 
@@ -92,18 +92,20 @@
         </template>
       </example>
 
-      <button @click="onDisabledForm">Заблочить форму</button>
+      <button @click="onDisabledForm">
+        Заблочить форму
+      </button>
     </page>
   </layout-documentation>
 </template>
 
 <script>
-  import { ref, reactive } from 'vue'
+  import { ref, reactive } from 'vue';
 
   export default {
     name: 'FormPage',
     setup () {
-      const disabledForm = ref(false)
+      const disabledForm = ref(false);
 
       const form = reactive({
         model: {
@@ -158,17 +160,17 @@
             }
           ]
         }
-      })
+      });
 
       function onDisabledForm () {
-        disabledForm.value = !disabledForm.value
+        disabledForm.value = !disabledForm.value;
       }
 
       return {
         disabledForm,
         form,
         onDisabledForm
-      }
+      };
     }
-  }
+  };
 </script>

@@ -41,7 +41,6 @@
         v-if="loading"
         class="v-image__placeholder-loading"
       >
-
         <slot name="placeholder"/>
       </div>
     </div>
@@ -49,8 +48,8 @@
 </template>
 
 <script>
-  import { ref, computed, onMounted } from 'vue'
-  import imageLoad from '../../utils/imageLoad'
+  import { ref, computed, onMounted } from 'vue';
+  import imageLoad from '../../utils/imageLoad';
 
   export default {
     name: 'VImage',
@@ -86,7 +85,7 @@
       onMounted(async () => {
         if (props.lazy) {
           try {
-            const { image } = await imageLoad(props.src)
+            const { image } = await imageLoad(props.src);
 
             loading.value = false;
             error.value = false;
@@ -107,7 +106,7 @@
         error,
         loading,
         currentSrc
-      }
+      };
     }
-  }
+  };
 </script>

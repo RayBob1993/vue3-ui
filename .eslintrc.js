@@ -1,14 +1,54 @@
 module.exports = {
   root: true,
   env: {
-    node: true
+    browser: true,
+    node: true,
+    es6: true
   },
-  extends: ["plugin:vue/vue3-essential"],
   parserOptions: {
-    parser: "babel-eslint"
+    parser: 'babel-eslint',
+    ecmaVersion: 6,
+    sourceType: 'module'
   },
+  extends: [
+    'plugin:vue/vue3-essential'
+  ],
   rules: {
-    "no-console": process.env.NODE_ENV === "production" ? "warn" : "off",
-    "no-debugger": process.env.NODE_ENV === "production" ? "warn" : "off"
-  }
+    'vue/html-closing-bracket-spacing': ['error', {
+      selfClosingTag: 'never'
+    }],
+    'vue/component-name-in-template-casing': [
+      'error', 'kebab-case',
+      {
+        registeredComponentsOnly: false
+      }
+    ],
+    'vue/html-indent': ['error', 2, {
+      alignAttributesVertically: true
+    }],
+    'vue/script-indent': ['error', 2, {
+      baseIndent: 1,
+      switchCase: 1
+    }],
+    'vue/max-attributes-per-line': ['error', {
+      multiline: {
+        allowFirstLine: false
+      }
+    }],
+    'vue/prop-name-casing': ['error', 'camelCase'],
+    'vue/attribute-hyphenation': ['error', 'always'],
+    semi: [2, 'always',
+      {
+        omitLastInOneLineBlock: false
+      }
+    ]
+  },
+  overrides: [
+    {
+      files: ['*.vue'],
+      rules: {
+        indent: 'off'
+      }
+    }
+  ]
 };

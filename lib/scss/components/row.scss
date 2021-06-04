@@ -1,17 +1,17 @@
 .v-row {
   display: flex;
   flex-flow: row wrap;
-  margin-left: -$gutters;
   margin-right: -$gutters;
+  margin-left: -$gutters;
 
   // Gutters
   &.no-gutters {
-    margin-left: 0;
     margin-right: 0;
+    margin-left: 0;
 
     > .v-col {
-      padding-left: 0;
       padding-right: 0;
+      padding-left: 0;
     }
   }
 

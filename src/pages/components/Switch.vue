@@ -8,10 +8,10 @@
         <template #view>
           <v-switch
             v-model="model"
-            activeValue="Да"
-            inactiveValue="Нет"
-            activeText="Да"
-            inactiveText="Нет"
+            active-value="Да"
+            inactive-value="Нет"
+            active-text="Да"
+            inactive-text="Нет"
           />
         </template>
       </example>
@@ -20,7 +20,7 @@
 </template>
 
 <script>
-  import { ref } from 'vue'
+  import { ref } from 'vue';
 
   export default {
     name: 'SwitchPage',
@@ -29,7 +29,7 @@
 
       return {
         model
-      }
+      };
     }
-  }
+  };
 </script>

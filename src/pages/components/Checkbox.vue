@@ -1,7 +1,6 @@
 <template>
   <layout-documentation>
     <page title="Чекбоксы">
-
       <example
         title="Базовый чекбокс"
         anchor="checkbox-base"
@@ -51,8 +50,8 @@
       >
         <template #view>
           <v-checkbox-group
-            direction="vertical"
             v-model="checkboxGroup"
+            direction="vertical"
           >
             <v-checkbox value="1">
               Чекбокс 1
@@ -96,8 +95,8 @@
       >
         <template #view>
           <v-checkbox-group
-            direction="vertical"
             v-model="checkboxButtonGroup"
+            direction="vertical"
           >
             <v-checkbox-button>
               Чекбокс кнопка
@@ -118,22 +117,22 @@
 </template>
 
 <script>
-  import { ref } from 'vue'
+  import { ref } from 'vue';
 
   export default {
     name: 'CheckboxPage',
     setup () {
-      const checkbox = ref(false)
-      const checkboxButton = ref(false)
-      const checkboxGroup = ref([])
-      const checkboxButtonGroup = ref([])
+      const checkbox = ref(false);
+      const checkboxButton = ref(false);
+      const checkboxGroup = ref([]);
+      const checkboxButtonGroup = ref([]);
 
       return {
         checkbox,
         checkboxButton,
         checkboxGroup,
         checkboxButtonGroup
-      }
+      };
     }
-  }
+  };
 </script>

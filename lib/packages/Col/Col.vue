@@ -9,7 +9,7 @@
 </template>
 
 <script>
-  import { computed } from 'vue'
+  import { computed } from 'vue';
 
   export default {
     name: 'VCol',
@@ -106,7 +106,7 @@
                       classList.push(`v-col-${definition}-${definitionValue[key]}`);
                       break;
                     default:
-                      classList.push(`v-col-${definition}-${key}-${definitionValue[key]}`)
+                      classList.push(`v-col-${definition}-${key}-${definitionValue[key]}`);
                   }
                 });
                 break;
@@ -114,12 +114,12 @@
           }
         });
 
-        return classList
+        return classList;
       });
 
       return {
         classes
-      }
+      };
     }
-  }
+  };
 </script>

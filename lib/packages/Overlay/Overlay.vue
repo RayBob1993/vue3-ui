@@ -21,12 +21,12 @@
     ],
     setup (props, { emit }) {
       function onClick () {
-        emit('click')
+        emit('click');
       }
 
       return {
         onClick
-      }
+      };
     }
-  }
+  };
 </script>

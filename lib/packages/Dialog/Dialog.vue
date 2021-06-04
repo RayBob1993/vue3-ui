@@ -66,7 +66,7 @@
 </template>
 
 <script>
-  import { computed } from 'vue'
+  import { computed } from 'vue';
   import {
     useDialog,
     CLOSE_EVENT,
@@ -74,9 +74,9 @@
     CLOSED_EVENT,
     OPENED_EVENT,
     UPDATE_MODEL_EVENT
-  } from './useDialog'
-  import { isValidComponentSize } from '../../utils/validators'
-  import VOverlay from '../Overlay'
+  } from './useDialog';
+  import { isValidComponentSize } from '../../utils/validators';
+  import VOverlay from '../Overlay';
 
   export default {
     name: 'VDialog',
@@ -129,12 +129,12 @@
       OPENED_EVENT
     ],
     setup (props, context) {
-      const ariaLabel = computed(() => props.title || 'dialog')
+      const ariaLabel = computed(() => props.title || 'dialog');
 
       return {
         ...useDialog(props, context),
         ariaLabel
-      }
+      };
     }
-  }
+  };
 </script>

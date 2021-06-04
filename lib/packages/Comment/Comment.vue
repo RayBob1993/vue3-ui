@@ -6,9 +6,7 @@
     }"
   >
     <div class="v-comment__inner">
-      <div class="v-comment__avatar">
-
-      </div>
+      <div class="v-comment__avatar"/>
 
       <div class="v-comment__content">
         <button
@@ -122,7 +120,7 @@
 </template>
 
 <script>
-  import { computed } from 'vue'
+  import { computed } from 'vue';
 
   export default {
     name: 'VComment',
@@ -150,12 +148,12 @@
         return props.showReply ||
           props.showVoted ||
           props.anchor ||
-          slots.commentFooter
-      })
+          slots.commentFooter;
+      });
 
       function onReply () {
         if (props.showReply) {
-          emit('reply', props.id)
+          emit('reply', props.id);
         }
       }
 
@@ -164,13 +162,13 @@
           emit('vote', {
             id: props.id,
             action
-          })
+          });
         }
       }
 
       function onDelete () {
         if (props.showDelete) {
-          emit('delete', props.id)
+          emit('delete', props.id);
         }
       }
 
@@ -179,7 +177,7 @@
         onReply,
         onDelete,
         onVote
-      }
+      };
     }
-  }
+  };
 </script>

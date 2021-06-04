@@ -14,9 +14,9 @@
 </template>
 
 <script>
-  import { inject, provide, readonly, computed } from 'vue'
-  import { UPDATE_MODEL_EVENT } from '../../utils/constants'
-  import { FORM_KEY, FORM_ITEM_KEY, CHECKBOX_GROUP_KEY } from '../../utils/keys'
+  import { inject, provide, readonly, computed } from 'vue';
+  import { UPDATE_MODEL_EVENT } from '../../utils/constants';
+  import { FORM_KEY, FORM_ITEM_KEY, CHECKBOX_GROUP_KEY } from '../../utils/keys';
 
   export default {
     name: 'VCheckboxGroup',
@@ -39,28 +39,28 @@
       'change'
     ],
     setup (props, { emit }) {
-      const Form = inject(FORM_KEY)
-      const FormItem = inject(FORM_ITEM_KEY)
+      const Form = inject(FORM_KEY);
+      const FormItem = inject(FORM_ITEM_KEY);
 
       const isDisabled = computed(() => {
         return Form && Form.disabled ||
           FormItem && FormItem.disabled ||
-          props.disabled
-      })
+          props.disabled;
+      });
 
       function onChange (value) {
-        emit(UPDATE_MODEL_EVENT, value)
-        emit('change', value)
+        emit(UPDATE_MODEL_EVENT, value);
+        emit('change', value);
       }
 
       provide(CHECKBOX_GROUP_KEY, readonly({
         props,
         onChange
-      }))
+      }));
 
       return {
         isDisabled
-      }
+      };
     }
-  }
+  };
 </script>

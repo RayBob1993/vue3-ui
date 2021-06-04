@@ -17,8 +17,8 @@
   }
 
   &__label {
-    font-style: inherit;
     font-weight: inherit;
+    font-style: inherit;
   }
 
   .v-icon {
@@ -38,23 +38,26 @@
 
   // Types
   &--default {
-    background-color: $color-default;
     border-color: $color-default;
 
     color: $color-default-text;
 
+    background-color: $color-default;
+
     &.v-button--outline {
-      background-color: transparent;
 
       color: $color-default-outline-text;
+
+      background-color: transparent;
 
       &:not(.v-button--disabled) {
         &:focus,
         &:hover {
-          background-color: $color-default-hover;
           border-color: $color-default-hover;
 
           color: $color-default-text;
+
+          background-color: $color-default-hover;
         }
       }
     }
@@ -62,10 +65,11 @@
     &:not(.v-button--disabled) {
       &:focus,
       &:hover {
-        background-color: $color-default-hover;
         border-color: $color-default-hover;
 
         color: $color-default-text;
+
+        background-color: $color-default-hover;
       }
     }
 
@@ -75,23 +79,26 @@
   }
 
   &--secondary {
-    background-color: $color-secondary;
     border-color: $color-secondary;
 
     color: $color-secondary-text;
 
+    background-color: $color-secondary;
+
     &.v-button--outline {
-      background-color: transparent;
 
       color: $color-secondary-outline-text;
+
+      background-color: transparent;
 
       &:not(.v-button--disabled) {
         &:focus,
         &:hover {
-          background-color: $color-secondary-hover;
           border-color: $color-secondary-hover;
 
           color: $color-secondary-text;
+
+          background-color: $color-secondary-hover;
         }
       }
     }
@@ -99,10 +106,11 @@
     &:not(.v-button--disabled) {
       &:focus,
       &:hover {
-        background-color: $color-secondary-hover;
         border-color: $color-secondary-hover;
 
         color: $color-secondary-text;
+
+        background-color: $color-secondary-hover;
       }
     }
 
@@ -112,23 +120,26 @@
   }
 
   &--primary {
-    background-color: $color-primary;
     border-color: $color-primary;
 
     color: $color-primary-text;
 
+    background-color: $color-primary;
+
     &.v-button--outline {
-      background-color: transparent;
 
       color: $color-primary-outline-text;
+
+      background-color: transparent;
 
       &:not(.v-button--disabled) {
         &:focus,
         &:hover {
-          background-color: $color-primary-hover;
           border-color: $color-primary-hover;
 
           color: $color-primary-text;
+
+          background-color: $color-primary-hover;
         }
       }
     }
@@ -136,10 +147,11 @@
     &:not(.v-button--disabled) {
       &:focus,
       &:hover {
-        background-color: $color-primary-hover;
         border-color: $color-primary-hover;
 
         color: $color-primary-text;
+
+        background-color: $color-primary-hover;
       }
     }
 
@@ -149,23 +161,26 @@
   }
 
   &--success {
-    background-color: $color-success;
     border-color: $color-success;
 
     color: $color-success-text;
 
+    background-color: $color-success;
+
     &.v-button--outline {
-      background-color: transparent;
 
       color: $color-success-outline-text;
+
+      background-color: transparent;
 
       &:not(.v-button--disabled) {
         &:focus,
         &:hover {
-          background-color: $color-success-hover;
           border-color: $color-success-hover;
 
           color: $color-danger-text;
+
+          background-color: $color-success-hover;
         }
       }
     }
@@ -173,10 +188,11 @@
     &:not(.v-button--disabled) {
       &:focus,
       &:hover {
-        background-color: $color-success-hover;
         border-color: $color-success-hover;
 
         color: $color-danger-text;
+
+        background-color: $color-success-hover;
       }
     }
 
@@ -186,23 +202,26 @@
   }
 
   &--danger {
-    background-color: $color-danger;
     border-color: $color-danger;
 
     color: $color-danger-text;
 
+    background-color: $color-danger;
+
     &.v-button--outline {
-      background-color: transparent;
 
       color: $color-danger-outline-text;
+
+      background-color: transparent;
 
       &:not(.v-button--disabled) {
         &:focus,
         &:hover {
-          background-color: $color-danger-hover;
           border-color: $color-danger-hover;
 
           color: $color-danger-text;
+
+          background-color: $color-danger-hover;
         }
       }
     }
@@ -210,10 +229,11 @@
     &:not(.v-button--disabled) {
       &:focus,
       &:hover {
-        background-color: $color-danger-hover;
         border-color: $color-danger-hover;
 
         color: $color-danger-text;
+
+        background-color: $color-danger-hover;
       }
     }
 
@@ -223,23 +243,26 @@
   }
 
   &--warning {
-    background-color: $color-warning;
     border-color: $color-warning;
 
     color: $color-warning-text;
 
+    background-color: $color-warning;
+
     &.v-button--outline {
-      background-color: transparent;
 
       color: $color-warning-outline-text;
+
+      background-color: transparent;
 
       &:not(.v-button--disabled) {
         &:focus,
         &:hover {
-          background-color: $color-warning-hover;
           border-color: $color-warning-hover;
 
           color: $color-danger-text;
+
+          background-color: $color-warning-hover;
         }
       }
     }
@@ -247,10 +270,11 @@
     &:not(.v-button--disabled) {
       &:focus,
       &:hover {
-        background-color: $color-warning-hover;
         border-color: $color-warning-hover;
 
         color: $color-warning-text;
+
+        background-color: $color-warning-hover;
       }
     }
 
@@ -260,23 +284,26 @@
   }
 
   &--info {
-    background-color: $color-info;
     border-color: $color-info;
 
     color: $color-info-text;
 
+    background-color: $color-info;
+
     &.v-button--outline {
-      background-color: transparent;
 
       color: $color-info-outline-text;
+
+      background-color: transparent;
 
       &:not(.v-button--disabled) {
         &:focus,
         &:hover {
-          background-color: $color-info-hover;
           border-color: $color-info-hover;
 
           color: $color-info-text;
+
+          background-color: $color-info-hover;
         }
       }
     }
@@ -284,10 +311,11 @@
     &:not(.v-button--disabled) {
       &:focus,
       &:hover {
-        background-color: $color-info-hover;
         border-color: $color-info-hover;
 
         color: $color-info-text;
+
+        background-color: $color-info-hover;
       }
     }
 
@@ -297,10 +325,11 @@
   }
 
   &--link {
-    background-color: $color-link;
 
     color: $color-link-text;
     text-decoration: underline;
+
+    background-color: $color-link;
 
     &.v-button--outline {
       background-color: transparent;
@@ -349,9 +378,9 @@
   }
 
   &--circle {
-    border-radius: $border-radius-circle;
 
     padding: $button-circle-size-default-padding;
+    border-radius: $border-radius-circle;
 
     &.v-button--size-default {
       min-width: $button-circle-size-default-height;
@@ -388,8 +417,8 @@
       height: 16px;
 
       border: 2px solid $color-black;
-      border-right-color: transparent;
       border-top-color: transparent;
+      border-right-color: transparent;
 
       border-radius: $border-radius-circle;
 

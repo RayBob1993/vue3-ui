@@ -12,33 +12,33 @@
 </template>
 
 <script>
-export default {
-  name: 'VRow',
-  props: {
-    justify: {
-      type: String,
-      validator: value => [
-        'start',
-        'center',
-        'end',
-        'around',
-        'between'
-      ].includes(value)
+  export default {
+    name: 'VRow',
+    props: {
+      justify: {
+        type: String,
+        validator: value => [
+          'start',
+          'center',
+          'end',
+          'around',
+          'between'
+        ].includes(value)
+      },
+      align: {
+        type: String,
+        validator: value => [
+          'start',
+          'center',
+          'end',
+          'baseline',
+          'stretch'
+        ].includes(value)
+      },
+      gutters: {
+        type: Boolean,
+        default: true,
+      },
     },
-    align: {
-      type: String,
-      validator: value => [
-        'start',
-        'center',
-        'end',
-        'baseline',
-        'stretch'
-      ].includes(value)
-    },
-    gutters: {
-      type: Boolean,
-      default: true,
-    },
-  },
-}
+  };
 </script>

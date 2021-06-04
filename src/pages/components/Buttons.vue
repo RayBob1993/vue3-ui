@@ -526,7 +526,10 @@
       >
         <template #view>
           <v-button-group>
-            <v-button label="default" size="mini"/>
+            <v-button
+              label="default"
+              size="mini"
+            />
             <v-button label="default"/>
             <v-button label="default"/>
           </v-button-group>
@@ -548,9 +551,18 @@
 
           <example-group title="Отдельная заблокированная кнопка в группе">
             <v-button-group>
-              <v-button label="default" type="primary"/>
-              <v-button label="default" :disabled="true"/>
-              <v-button label="default" type="warning"/>
+              <v-button
+                label="default"
+                type="primary"
+              />
+              <v-button
+                label="default"
+                :disabled="true"
+              />
+              <v-button
+                label="default"
+                type="warning"
+              />
             </v-button-group>
           </example-group>
         </template>
@@ -601,5 +613,5 @@
 <script>
   export default {
     name: 'ButtonsPage'
-  }
+  };
 </script>

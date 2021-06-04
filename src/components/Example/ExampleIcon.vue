@@ -1,7 +1,7 @@
 <template>
   <v-card class="example-icon">
     <v-icon
-      strokeWidth="1"
+      stroke-width="1"
       :name="name"
     />
 
@@ -19,5 +19,5 @@
     props: {
       name: String
     }
-  }
+  };
 </script>

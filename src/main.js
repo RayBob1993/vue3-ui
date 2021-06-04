@@ -1,39 +1,39 @@
-import { createApp } from 'vue'
-import router from './router'
-import VueUI from '../lib'
+import { createApp } from 'vue';
+import router from './router';
+import VueUI from '../lib';
 
-import '@/assets/scss/index.scss'
+import '@/assets/scss/index.scss';
 
-import App from './App.vue'
+import App from './App.vue';
 
 // Layouts
-import LayoutDocumentation from '@/layouts/documentation'
-import LayoutDefault from '@/layouts/default'
+import LayoutDocumentation from '@/layouts/documentation';
+import LayoutDefault from '@/layouts/default';
 
 // Components
-import AppHeader from '@/components/AppHeader'
-import AppHeaderMenu from '@/components/AppHeaderMenu'
-import Logo from '@/components/Logo'
-import DocumentationMenu from '@/components/DocumentationMenu'
-import Page from '@/components/Page'
-import Example from '@/components/Example/Example'
-import ExampleGroup from '@/components/Example/ExampleGroup'
-import ExampleIcon from '@/components/Example/ExampleIcon'
+import AppHeader from '@/components/AppHeader';
+import AppHeaderMenu from '@/components/AppHeaderMenu';
+import Logo from '@/components/Logo';
+import DocumentationMenu from '@/components/DocumentationMenu';
+import Page from '@/components/Page';
+import Example from '@/components/Example/Example';
+import ExampleGroup from '@/components/Example/ExampleGroup';
+import ExampleIcon from '@/components/Example/ExampleIcon';
 
-const app = createApp(App)
+const app = createApp(App);
 
-app.component(LayoutDocumentation.name, LayoutDocumentation)
-app.component(LayoutDefault.name, LayoutDefault)
-app.component(AppHeader.name, AppHeader)
-app.component(AppHeaderMenu.name, AppHeaderMenu)
-app.component(Logo.name, Logo)
-app.component(DocumentationMenu.name, DocumentationMenu)
-app.component(Page.name, Page)
-app.component(Example.name, Example)
-app.component(ExampleGroup.name, ExampleGroup)
-app.component(ExampleIcon.name, ExampleIcon)
+app.component(LayoutDocumentation.name, LayoutDocumentation);
+app.component(LayoutDefault.name, LayoutDefault);
+app.component(AppHeader.name, AppHeader);
+app.component(AppHeaderMenu.name, AppHeaderMenu);
+app.component(Logo.name, Logo);
+app.component(DocumentationMenu.name, DocumentationMenu);
+app.component(Page.name, Page);
+app.component(Example.name, Example);
+app.component(ExampleGroup.name, ExampleGroup);
+app.component(ExampleIcon.name, ExampleIcon);
 
-app.use(VueUI)
-app.use(router)
+app.use(VueUI);
+app.use(router);
 
-app.mount('#app')
+app.mount('#app');

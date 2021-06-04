@@ -66,8 +66,8 @@
 </template>
 
 <script>
-  import { isValidType } from '../../utils/validators'
-  import VImage from '../../packages/Image'
+  import { isValidType } from '../../utils/validators';
+  import VImage from '../../packages/Image';
 
   export default {
     name: 'VCard',
@@ -95,5 +95,5 @@
     setup () {
 
     }
-  }
+  };
 </script>

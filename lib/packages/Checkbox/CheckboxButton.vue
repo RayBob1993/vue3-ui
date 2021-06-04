@@ -10,8 +10,8 @@
     ]"
   >
     <input
-      type="checkbox"
       v-model="model"
+      type="checkbox"
       class="v-checkbox-button__native"
       :disabled="isDisabled"
       :checked="isChecked"
@@ -27,9 +27,9 @@
 </template>
 
 <script>
-  import { UPDATE_MODEL_EVENT } from '../../utils/constants'
-  import { isValidComponentSize } from '../../utils/validators'
-  import { useCheckbox } from './useCheckbox'
+  import { UPDATE_MODEL_EVENT } from '../../utils/constants';
+  import { isValidComponentSize } from '../../utils/validators';
+  import { useCheckbox } from './useCheckbox';
 
   export default {
     name: 'VCheckboxButton',
@@ -65,7 +65,7 @@
       'blur'
     ],
     setup (props, context) {
-      return useCheckbox(props, context)
+      return useCheckbox(props, context);
     }
-  }
+  };
 </script>

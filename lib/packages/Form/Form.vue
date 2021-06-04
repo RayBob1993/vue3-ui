@@ -16,7 +16,7 @@
 </template>
 
 <script>
-  import { provide, readonly, ref } from 'vue'
+  import { provide, readonly, ref } from 'vue';
 
   export default {
     name: 'VForm',
@@ -31,28 +31,28 @@
       rules: Object
     },
     setup (props) {
-      const isValid = ref(false)
+      const isValid = ref(false);
 
       function resetFields () {
-        console.log('resetFields')
+        console.log('resetFields');
       }
 
       function clearValidate () {
-        console.log('clearValidate')
+        console.log('clearValidate');
       }
 
       function validate () {
-        console.log('validate')
+        console.log('validate');
       }
 
-      provide('Form', readonly(props))
+      provide('Form', readonly(props));
 
       return {
         isValid,
         resetFields,
         clearValidate,
         validate
-      }
+      };
     }
-  }
+  };
 </script>

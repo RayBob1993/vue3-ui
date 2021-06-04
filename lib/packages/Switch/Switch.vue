@@ -34,10 +34,10 @@
 </template>
 
 <script>
-  import { inject, computed } from 'vue'
-  import { UPDATE_MODEL_EVENT } from '../../utils/constants'
-  import { isValidComponentSize } from '../../utils/validators'
-  import { FORM_KEY, FORM_ITEM_KEY } from '../../utils/keys'
+  import { inject, computed } from 'vue';
+  import { UPDATE_MODEL_EVENT } from '../../utils/constants';
+  import { isValidComponentSize } from '../../utils/validators';
+  import { FORM_KEY, FORM_ITEM_KEY } from '../../utils/keys';
 
   export default {
     name: 'VSwitch',
@@ -79,28 +79,28 @@
       'change'
     ],
     setup (props, { emit }) {
-      const Form = inject(FORM_KEY)
-      const FormItem = inject(FORM_ITEM_KEY)
+      const Form = inject(FORM_KEY);
+      const FormItem = inject(FORM_ITEM_KEY);
 
       const isDisabled = computed(() => {
         return Form && Form.disabled ||
           FormItem && FormItem.disabled ||
-          props.disabled
-      })
+          props.disabled;
+      });
 
-      const isChecked = computed(() => props.modelValue === props.activeValue)
-      const value = computed(() => isChecked.value ? props.inactiveValue : props.activeValue)
+      const isChecked = computed(() => props.modelValue === props.activeValue);
+      const value = computed(() => isChecked.value ? props.inactiveValue : props.activeValue);
 
       function onChange () {
-        emit(UPDATE_MODEL_EVENT, value.value)
-        emit('change', value.value)
+        emit(UPDATE_MODEL_EVENT, value.value);
+        emit('change', value.value);
       }
 
       return {
         isDisabled,
         isChecked,
         onChange
-      }
+      };
     }
-  }
+  };
 </script>

@@ -47,7 +47,7 @@
 </template>
 
 <script>
-  import { isValidType } from '../../utils/validators'
+  import { isValidType } from '../../utils/validators';
 
   export default {
     name: 'VAlert',
@@ -70,13 +70,13 @@
     setup (props, { emit }) {
       function onCloseAlert () {
         if (props.closable) {
-          emit('update:close', false)
+          emit('update:close', false);
         }
       }
 
       return {
         onCloseAlert
-      }
+      };
     }
-  }
+  };
 </script>

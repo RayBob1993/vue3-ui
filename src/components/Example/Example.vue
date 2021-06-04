@@ -38,7 +38,7 @@
       anchor: String
     },
     setup (props) {
-      return props
+      return props;
     }
-  }
+  };
 </script>

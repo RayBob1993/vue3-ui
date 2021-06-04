@@ -56,10 +56,11 @@
     &:checked ~ .v-checkbox-button__content {
       z-index: 2;
 
-      background-color: $color-blue;
       border-color: $color-blue;
 
       color: $color-white;
+
+      background-color: $color-blue;
     }
   }
 

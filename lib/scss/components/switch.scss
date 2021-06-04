@@ -32,9 +32,9 @@
     &:checked ~ .v-switch__input {
       &:before {
         margin-left: 17px;
+        border-color: $color-blue;
 
         background-color: $color-blue;
-        border-color: $color-blue;
       }
     }
   }
@@ -65,9 +65,9 @@
       height: 14px;
       border: 1px solid $color-gray;
 
-      transition: $transition-base;
-
       border-radius: $border-radius-circle;
+
+      transition: $transition-base;
 
       content: '';
     }

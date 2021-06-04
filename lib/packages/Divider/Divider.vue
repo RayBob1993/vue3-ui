@@ -25,5 +25,5 @@
         default: 'center'
       }
     }
-  }
+  };
 </script>

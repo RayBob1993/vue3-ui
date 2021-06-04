@@ -19,8 +19,8 @@
 
   &--size-default {
     .v-radio-button__content {
-      padding: $button-size-default-padding;
       min-height: $button-size-default-height;
+      padding: $button-size-default-padding;
 
       font-size: $font-size-default;
     }
@@ -28,8 +28,8 @@
 
   &--size-lg {
     .v-radio-button__content {
-      padding: $button-size-lg-padding;
       min-height: $button-size-lg-height;
+      padding: $button-size-lg-padding;
 
       font-size: $font-size-lg;
     }
@@ -37,8 +37,8 @@
 
   &--size-md {
     .v-radio-button__content {
-      padding: $button-size-md-padding;
       min-height: $button-size-md-height;
+      padding: $button-size-md-padding;
 
       font-size: $font-size-md;
     }
@@ -46,8 +46,8 @@
 
   &--size-sm {
     .v-radio-button__content {
-      padding: $button-size-sm-padding;
       min-height: $button-size-sm-height;
+      padding: $button-size-sm-padding;
 
       font-size: $font-size-sm;
     }
@@ -55,8 +55,8 @@
 
   &--size-xs {
     .v-radio-button__content {
-      padding: $button-size-xs-padding;
       min-height: $button-size-xs-height;
+      padding: $button-size-xs-padding;
 
       font-size: $font-size-xs;
     }
@@ -68,10 +68,11 @@
     &:checked ~ .v-radio-button__content {
       z-index: 2;
 
-      background-color: $color-blue;
       border-color: $color-blue;
 
       color: $color-white;
+
+      background-color: $color-blue;
     }
   }
 

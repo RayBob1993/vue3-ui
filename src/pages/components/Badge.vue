@@ -1,37 +1,59 @@
 <template>
   <layout-documentation>
     <page title="Badges">
-      <v-badge :value="10" type="primary" dot>
+      <v-badge
+        :value="10"
+        type="primary"
+        dot
+      >
         <v-button label="Кнопка"/>
       </v-badge>
 
       <hr>
 
-      <v-badge value="10" type="success" position="top-left">
+      <v-badge
+        value="10"
+        type="success"
+        position="top-left"
+      >
         <v-button label="Кнопка"/>
       </v-badge>
 
       <hr>
 
-      <v-badge value="10" type="danger" position="bottom-right">
+      <v-badge
+        value="10"
+        type="danger"
+        position="bottom-right"
+      >
         <v-button label="Кнопка"/>
       </v-badge>
 
       <hr>
 
-      <v-badge value="10" type="warning" position="bottom-left">
+      <v-badge
+        value="10"
+        type="warning"
+        position="bottom-left"
+      >
         <v-button label="Кнопка"/>
       </v-badge>
 
       <hr>
 
-      <v-badge value="new" type="info">
+      <v-badge
+        value="new"
+        type="info"
+      >
         <v-button label="hover"/>
       </v-badge>
 
       <hr>
 
-      <v-badge value="10" hover>
+      <v-badge
+        value="10"
+        hover
+      >
         <v-button label="hover"/>
       </v-badge>
     </page>
@@ -44,5 +66,5 @@
     setup () {
 
     }
-  }
+  };
 </script>

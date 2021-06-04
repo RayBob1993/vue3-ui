@@ -58,11 +58,11 @@
 
     margin: 0;
     border: 1px solid #ccc;
-
-    box-shadow: inset 0 0.0625em 0.125em hsl(0deg 0% 4% / 5%);
     border-radius: $border-radius-default;
 
     outline: none;
+
+    box-shadow: inset 0 0.0625em 0.125em hsl(0deg 0% 4% / 5%);
 
     transition: $transition-base;
 
@@ -102,8 +102,9 @@
         width: 18px;
         height: 18px;
 
-        stroke: $color-black;
         opacity: .5;
+
+        stroke: $color-black;
       }
 
       &--password {}

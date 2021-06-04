@@ -15,8 +15,9 @@
     display: block;
     margin-bottom: 10px;
 
-    font-weight: bold;
     color: $color-dark;
+
+    font-weight: bold;
 
     &-required {
       color: $color-danger;

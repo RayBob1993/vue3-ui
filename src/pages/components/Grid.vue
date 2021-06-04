@@ -1,8 +1,6 @@
 <template>
   <layout-documentation>
-    <page title="Grid">
-
-    </page>
+    <page title="Grid"/>
   </layout-documentation>
 </template>
 
@@ -12,5 +10,5 @@
     setup () {
 
     }
-  }
+  };
 </script>

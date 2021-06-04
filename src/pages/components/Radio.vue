@@ -50,8 +50,8 @@
       >
         <template #view>
           <v-radio-group
-            direction="vertical"
             v-model="radioGroup"
+            direction="vertical"
           >
             <v-radio>
               Радио
@@ -95,8 +95,8 @@
       >
         <template #view>
           <v-radio-group
-            direction="vertical"
             v-model="radioButtonGroup"
+            direction="vertical"
           >
             <v-radio-button>
               Радио кнопка
@@ -117,22 +117,22 @@
 </template>
 
 <script>
-  import { ref } from 'vue'
+  import { ref } from 'vue';
 
   export default {
     name: 'RadioPage',
     setup () {
-      const radio = ref(false)
-      const radioButton = ref(false)
-      const radioGroup = ref([])
-      const radioButtonGroup = ref([])
+      const radio = ref(false);
+      const radioButton = ref(false);
+      const radioGroup = ref([]);
+      const radioButtonGroup = ref([]);
 
       return {
         radio,
         radioButton,
         radioGroup,
         radioButtonGroup
-      }
+      };
     }
-  }
+  };
 </script>

@@ -10,8 +10,8 @@
     ]"
   >
     <input
-      type="radio"
       v-model="model"
+      type="radio"
       class="v-radio-button__native"
       :disabled="isDisabled"
       :checked="isChecked"
@@ -27,9 +27,9 @@
 </template>
 
 <script>
-  import { UPDATE_MODEL_EVENT } from '../../utils/constants'
-  import { isValidComponentSize } from '../../utils/validators'
-  import { useRadio } from './useRadio'
+  import { UPDATE_MODEL_EVENT } from '../../utils/constants';
+  import { isValidComponentSize } from '../../utils/validators';
+  import { useRadio } from './useRadio';
 
   export default {
     name: 'VRadioButton',
@@ -65,7 +65,7 @@
       'blur'
     ],
     setup (props, context) {
-      return useRadio(props, context)
+      return useRadio(props, context);
     }
-  }
+  };
 </script>

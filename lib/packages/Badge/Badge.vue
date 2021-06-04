@@ -21,7 +21,7 @@
 </template>
 
 <script>
-  import { computed } from 'vue'
+  import { computed } from 'vue';
 
   export default {
     name: 'VBadge',
@@ -72,7 +72,7 @@
 
       return {
         currentValue
-      }
+      };
     }
-  }
+  };
 </script>

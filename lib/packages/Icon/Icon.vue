@@ -19,7 +19,7 @@
 </template>
 
 <script>
-  import { computed } from 'vue'
+  import { computed } from 'vue';
 
   export default {
     name: 'VIcon',
@@ -52,11 +52,11 @@
       }
     },
     setup (props) {
-      const iconName = computed(() => props.name + 'Icon')
+      const iconName = computed(() => props.name + 'Icon');
 
       return {
         iconName
-      }
+      };
     }
-  }
+  };
 </script>

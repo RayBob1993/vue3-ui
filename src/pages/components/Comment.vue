@@ -178,23 +178,23 @@
     name: 'CommentsPage',
     setup () {
       function onVote ({ id, action }) {
-        console.log(id)
-        console.log(action)
+        console.log(id);
+        console.log(action);
       }
 
       function onReply (id) {
-        console.log(id)
+        console.log(id);
       }
 
       function onDelete (id) {
-        console.log(id)
+        console.log(id);
       }
 
       return {
         onVote,
         onReply,
         onDelete
-      }
+      };
     }
-  }
+  };
 </script>

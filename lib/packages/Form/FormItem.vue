@@ -31,8 +31,8 @@
     >
       <div
         v-for="(error, index) in validationErrors"
-        class="v-form-item__error"
         :key="`error-${index}`"
+        class="v-form-item__error"
       >
         {{ error }}
       </div>
@@ -41,7 +41,7 @@
 </template>
 
 <script>
-  import { ref, computed, provide, inject, readonly } from 'vue'
+  import { ref, computed, provide, inject, readonly } from 'vue';
   // import Schema from 'async-validator'
 
   export default {
@@ -57,18 +57,18 @@
       }
     },
     setup (props) {
-      const Form = inject('Form')
+      const Form = inject('Form');
 
-      const value = computed(() => Form && Form.model[props.prop])
-      const validationRules = computed(() => Form && Form.rules[props.prop])
+      const value = computed(() => Form && Form.model[props.prop]);
+      const validationRules = computed(() => Form && Form.rules[props.prop]);
 
-      const isDisabled = computed(() => Form && Form.disabled || props.disabled)
-      const isReadonly = computed(() => Form && Form.readonly || props.readonly)
-      const isRequired = computed(() => validationRules.value && !!validationRules.value.find(rule => rule.required === true))
+      const isDisabled = computed(() => Form && Form.disabled || props.disabled);
+      const isReadonly = computed(() => Form && Form.readonly || props.readonly);
+      const isRequired = computed(() => validationRules.value && !!validationRules.value.find(rule => rule.required === true));
 
-      const validationErrors = ref([])
-      const hasValidationErrors = computed(() => !!validationErrors.value.length)
-      const isShowErrors = computed(() => Form && Form.showErrors && props.showErrors && hasValidationErrors.value)
+      const validationErrors = ref([]);
+      const hasValidationErrors = computed(() => !!validationErrors.value.length);
+      const isShowErrors = computed(() => Form && Form.showErrors && props.showErrors && hasValidationErrors.value);
 
       // const validator = new Schema({
       //
@@ -76,7 +76,7 @@
       //   firstFields: true
       // });
 
-      provide('FormItem', readonly(props))
+      provide('FormItem', readonly(props));
 
       return {
         isDisabled,
@@ -86,7 +86,7 @@
         isShowErrors,
         isRequired,
         value
-      }
+      };
     }
-  }
+  };
 </script>

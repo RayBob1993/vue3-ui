@@ -154,10 +154,10 @@
 </template>
 
 <script>
-  import { ref, computed, watchEffect, inject } from 'vue'
-  import { UPDATE_MODEL_EVENT } from '../../utils/constants'
-  import { isValidComponentSize } from '../../utils/validators'
-  import { FORM_KEY, FORM_ITEM_KEY } from '../../utils/keys'
+  import { ref, computed, watchEffect, inject } from 'vue';
+  import { UPDATE_MODEL_EVENT } from '../../utils/constants';
+  import { isValidComponentSize } from '../../utils/validators';
+  import { FORM_KEY, FORM_ITEM_KEY } from '../../utils/keys';
 
   export default {
     name: 'VInput',
@@ -213,26 +213,26 @@
       'clear'
     ],
     setup (props, { emit, attrs, slots }) {
-      const Form = inject(FORM_KEY)
-      const FormItem = inject(FORM_ITEM_KEY)
+      const Form = inject(FORM_KEY);
+      const FormItem = inject(FORM_ITEM_KEY);
 
       const isDisabled = computed(() => {
         return Form && Form.disabled ||
           FormItem && FormItem.disabled ||
           props.disabled ||
-          props.loading
-      })
+          props.loading;
+      });
 
       const isReadonly = computed(() => {
         return Form && Form.readonly ||
           FormItem && FormItem.readonly ||
-          props.readonly
-      })
+          props.readonly;
+      });
 
       const ariaLabel = computed(() => {
         return FormItem && FormItem.label ||
-          props.label
-      })
+          props.label;
+      });
 
       const value = computed({
         get: () => props.modelValue,
@@ -250,7 +250,7 @@
           !isReadonly.value &&
           !props.showPassword &&
           !slots.count &&
-          attrs.maxlength
+          attrs.maxlength;
       });
       const isExceed = computed(() => props.showLimit && (valueLength.value >= maxLength.value));
       const isClearButtonVisible = computed(() => props.clearable && Boolean(valueLength.value));
@@ -331,7 +331,7 @@
         onKeydown,
         onKeypress,
         onTogglePasswordVisible
-      }
+      };
     }
-  }
+  };
 </script>

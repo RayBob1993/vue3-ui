@@ -35,7 +35,7 @@
 </template>
 
 <script>
-  import { ref } from 'vue'
+  import { ref } from 'vue';
 
   export default {
     name: 'DocumentationMenu',
@@ -271,7 +271,7 @@
 
       return {
         menuList
-      }
+      };
     }
-  }
+  };
 </script>

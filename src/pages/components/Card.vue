@@ -175,5 +175,5 @@
 <script>
   export default {
     name: 'CardPage',
-  }
+  };
 </script>

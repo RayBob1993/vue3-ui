@@ -16,9 +16,9 @@
       >
         <template #view>
           <v-input
+            v-model="model2"
             type="textarea"
             rows="7"
-            v-model="model2"
           />
         </template>
       </example>
@@ -29,10 +29,10 @@
       >
         <template #view>
           <v-input
+            v-model="model3"
             type="password"
             show-password
             clearable
-            v-model="model3"
           />
         </template>
       </example>
@@ -43,8 +43,8 @@
       >
         <template #view>
           <v-input
-            loading
             v-model="model4"
+            loading
           />
         </template>
       </example>
@@ -55,9 +55,9 @@
       >
         <template #view>
           <v-input
+            v-model="model5"
             show-limit
             maxlength="100"
-            v-model="model5"
           />
         </template>
       </example>
@@ -68,8 +68,8 @@
       >
         <template #view>
           <v-input
-            clearable
             v-model="model6"
+            clearable
           />
         </template>
       </example>
@@ -78,7 +78,7 @@
 </template>
 
 <script>
-  import { ref } from 'vue'
+  import { ref } from 'vue';
 
   export default {
     name: 'Inputs',
@@ -98,7 +98,7 @@
         model4,
         model5,
         model6,
-      }
+      };
     }
-  }
+  };
 </script>

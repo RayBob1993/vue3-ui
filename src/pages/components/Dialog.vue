@@ -7,8 +7,8 @@
       >
         <template #view>
           <v-button
-            @click="dialog1Visible = !dialog1Visible"
             label="Открыть окно"
+            @click="dialog1Visible = !dialog1Visible"
           />
 
           <v-dialog
@@ -24,7 +24,7 @@
 </template>
 
 <script>
-  import { ref } from 'vue'
+  import { ref } from 'vue';
 
   export default {
     name: 'DialogPage',
@@ -33,7 +33,7 @@
 
       return {
         dialog1Visible
-      }
+      };
     }
-  }
+  };
 </script>

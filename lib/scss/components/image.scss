@@ -1,8 +1,9 @@
 .v-image {
   position: relative;
 
-  overflow: hidden;
   margin: 0;
+
+  overflow: hidden;
 
   &--rounded {
     .v-image__native,
@@ -33,17 +34,17 @@
   }
 
   &__placeholder {
-    height: 100%;
     width: 100%;
+    height: 100%;
 
     background-color: $color-default;
 
     &-error {
       &__icon {
         display: block;
-        margin: 0 auto;
         width: 40px;
         height: 40px;
+        margin: 0 auto;
 
         stroke: $color-gray-dark;
       }

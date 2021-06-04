@@ -55,9 +55,9 @@
 </template>
 
 <script>
-  import { computed, inject } from 'vue'
-  import { isValidComponentSize } from '../../utils/validators'
-  import { FORM_KEY, FORM_ITEM_KEY, BUTTON_GROUP_KEY } from '../../utils/keys'
+  import { computed, inject } from 'vue';
+  import { isValidComponentSize } from '../../utils/validators';
+  import { FORM_KEY, FORM_ITEM_KEY, BUTTON_GROUP_KEY } from '../../utils/keys';
 
   export default {
     name: 'VButton',
@@ -123,33 +123,33 @@
       'focus'
     ],
     setup (props, { emit }) {
-      const Form = inject(FORM_KEY)
-      const FormItem = inject(FORM_ITEM_KEY)
-      const ButtonGroup = inject(BUTTON_GROUP_KEY)
+      const Form = inject(FORM_KEY);
+      const FormItem = inject(FORM_ITEM_KEY);
+      const ButtonGroup = inject(BUTTON_GROUP_KEY);
 
       const isDisabled = computed(() => {
         return Form && Form.disabled ||
           FormItem && FormItem.disabled ||
           ButtonGroup && ButtonGroup.disabled ||
           props.disabled ||
-          props.loading
-      })
+          props.loading;
+      });
 
-      const currentSize = computed(() => (ButtonGroup && ButtonGroup.size) || props.size)
+      const currentSize = computed(() => (ButtonGroup && ButtonGroup.size) || props.size);
 
-      const isIconAlignLeft = computed(() => props.icon && props.iconAlign === 'left')
-      const isIconAlignRight = computed(() => props.icon && props.iconAlign === 'right')
+      const isIconAlignLeft = computed(() => props.icon && props.iconAlign === 'left');
+      const isIconAlignRight = computed(() => props.icon && props.iconAlign === 'right');
 
       function onClick (event) {
-        emit('click', event)
+        emit('click', event);
       }
 
       function onBlur (event) {
-        emit('blur', event)
+        emit('blur', event);
       }
 
       function onFocus (event) {
-        emit('focus', event)
+        emit('focus', event);
       }
 
       return {
@@ -160,7 +160,7 @@
         onClick,
         onBlur,
         onFocus
-      }
+      };
     }
-  }
+  };
 </script>

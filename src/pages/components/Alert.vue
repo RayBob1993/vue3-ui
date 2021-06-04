@@ -20,9 +20,9 @@
         <template #view>
           <v-alert
             v-if="closable"
+            v-model:close="closable"
             title="Заголовок уведомления"
             description="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione, unde."
-            v-model:close="closable"
             closable
           />
         </template>
@@ -157,7 +157,7 @@
 </template>
 
 <script>
-  import { ref } from 'vue'
+  import { ref } from 'vue';
 
   export default {
     name: 'AlertsPage',
@@ -166,7 +166,7 @@
 
       return {
         closable
-      }
+      };
     }
-  }
+  };
 </script>

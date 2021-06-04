@@ -10,13 +10,13 @@
 </template>
 
 <script>
-export default {
-  name: 'VContainer',
-  props: {
-    fluid: {
-      type: Boolean,
-      default: false,
+  export default {
+    name: 'VContainer',
+    props: {
+      fluid: {
+        type: Boolean,
+        default: false,
+      },
     },
-  },
-}
+  };
 </script>

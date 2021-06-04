@@ -1,8 +1,8 @@
-import { createWebHistory, createRouter } from 'vue-router'
-import componentsRoutes from './components'
+import { createWebHistory, createRouter } from 'vue-router';
+import componentsRoutes from './components';
 
-import MainPage from '@/pages/Index.vue'
-import NotFound from '@/pages/NotFound.vue'
+import MainPage from '@/pages/Index.vue';
+import NotFound from '@/pages/NotFound.vue';
 
 const routes = [
   {
